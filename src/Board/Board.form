@@ -1,0 +1,380 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="Board.Board">
+  <grid id="27dc6" binding="mainPanel" layout-manager="GridLayoutManager" row-count="8" column-count="10" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+    <margin top="0" left="0" bottom="0" right="0"/>
+    <constraints>
+      <xy x="20" y="20" width="913" height="523"/>
+    </constraints>
+    <properties/>
+    <border type="none"/>
+    <children>
+      <component id="9df5" class="javax.swing.JButton" binding="userAsset1">
+        <constraints>
+          <grid row="6" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Asset1"/>
+        </properties>
+      </component>
+      <vspacer id="1ba0c">
+        <constraints>
+          <grid row="2" column="4" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+        </constraints>
+      </vspacer>
+      <component id="ee5a4" class="javax.swing.JButton" binding="userAsset2">
+        <constraints>
+          <grid row="6" column="5" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Asset2"/>
+        </properties>
+      </component>
+      <component id="2a272" class="javax.swing.JButton" binding="userAsset3">
+        <constraints>
+          <grid row="6" column="6" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Asset3"/>
+        </properties>
+      </component>
+      <component id="1d2d1" class="javax.swing.JButton" binding="userAsset4">
+        <constraints>
+          <grid row="6" column="7" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Asset4"/>
+        </properties>
+      </component>
+      <component id="38206" class="javax.swing.JButton" binding="userAsset5">
+        <constraints>
+          <grid row="6" column="8" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Asset5"/>
+        </properties>
+      </component>
+      <hspacer id="5330a">
+        <constraints>
+          <grid row="6" column="0" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+      </hspacer>
+      <component id="433db" class="javax.swing.JButton" binding="opAsset5Button" default-binding="true">
+        <constraints>
+          <grid row="1" column="8" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="opAsset5"/>
+        </properties>
+      </component>
+      <component id="5dc25" class="javax.swing.JButton" binding="opAsset4Button" default-binding="true">
+        <constraints>
+          <grid row="1" column="7" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="opAsset4"/>
+        </properties>
+      </component>
+      <component id="4560d" class="javax.swing.JButton" binding="opAsset3Button" default-binding="true">
+        <constraints>
+          <grid row="1" column="6" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="opAsset3"/>
+        </properties>
+      </component>
+      <component id="918ce" class="javax.swing.JButton" binding="opAsset2Button" default-binding="true">
+        <constraints>
+          <grid row="1" column="5" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="opAsset2"/>
+        </properties>
+      </component>
+      <component id="b0db5" class="javax.swing.JButton" binding="opAsset1Button" default-binding="true">
+        <constraints>
+          <grid row="1" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="opAsset1"/>
+        </properties>
+      </component>
+      <vspacer id="dc288">
+        <constraints>
+          <grid row="5" column="4" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+        </constraints>
+      </vspacer>
+      <component id="6f143" class="javax.swing.JLabel" binding="userHealth">
+        <constraints>
+          <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Your Health: null"/>
+        </properties>
+      </component>
+      <component id="6a2d2" class="javax.swing.JLabel" binding="opHealth">
+        <constraints>
+          <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Opponents Health: null"/>
+        </properties>
+      </component>
+      <component id="ed8ea" class="javax.swing.JButton" binding="userCard5">
+        <constraints>
+          <grid row="7" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Card5"/>
+        </properties>
+      </component>
+      <component id="1f707" class="javax.swing.JButton" binding="userCard6">
+        <constraints>
+          <grid row="7" column="5" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Card6"/>
+        </properties>
+      </component>
+      <component id="a44d7" class="javax.swing.JButton" binding="userCard7">
+        <constraints>
+          <grid row="7" column="6" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Card7"/>
+        </properties>
+      </component>
+      <component id="30a4e" class="javax.swing.JButton" binding="userCard8">
+        <constraints>
+          <grid row="7" column="7" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Card8"/>
+        </properties>
+      </component>
+      <component id="1539f" class="javax.swing.JButton" binding="userCard9">
+        <constraints>
+          <grid row="7" column="8" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Card9"/>
+        </properties>
+      </component>
+      <component id="869f3" class="javax.swing.JButton" binding="userCard10">
+        <constraints>
+          <grid row="7" column="9" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Card10"/>
+        </properties>
+      </component>
+      <component id="fc0a3" class="javax.swing.JButton" binding="userCard4">
+        <constraints>
+          <grid row="7" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Card4"/>
+        </properties>
+      </component>
+      <component id="a7ea1" class="javax.swing.JButton" binding="userCard3">
+        <constraints>
+          <grid row="7" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Card3"/>
+        </properties>
+      </component>
+      <component id="d3213" class="javax.swing.JButton" binding="userCard2">
+        <constraints>
+          <grid row="7" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Card2"/>
+        </properties>
+      </component>
+      <component id="8193a" class="javax.swing.JButton" binding="userCard1">
+        <constraints>
+          <grid row="7" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Card1"/>
+        </properties>
+      </component>
+      <component id="1664c" class="javax.swing.JButton" binding="opCard1">
+        <constraints>
+          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="opCard1"/>
+        </properties>
+      </component>
+      <component id="444df" class="javax.swing.JButton" binding="opCard2">
+        <constraints>
+          <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="opCard2"/>
+        </properties>
+      </component>
+      <component id="95015" class="javax.swing.JButton" binding="opCard3">
+        <constraints>
+          <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="opCard3"/>
+        </properties>
+      </component>
+      <component id="8fe2b" class="javax.swing.JButton" binding="opCard4">
+        <constraints>
+          <grid row="0" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="opCard4"/>
+        </properties>
+      </component>
+      <component id="4295" class="javax.swing.JButton" binding="opCard5">
+        <constraints>
+          <grid row="0" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="opCard5"/>
+        </properties>
+      </component>
+      <component id="f7df9" class="javax.swing.JButton" binding="opCard6">
+        <constraints>
+          <grid row="0" column="5" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="opCard6"/>
+        </properties>
+      </component>
+      <component id="1fe9b" class="javax.swing.JButton" binding="opCard7">
+        <constraints>
+          <grid row="0" column="6" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="opCard7"/>
+        </properties>
+      </component>
+      <component id="e87de" class="javax.swing.JButton" binding="opCard8">
+        <constraints>
+          <grid row="0" column="7" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="opCard8"/>
+        </properties>
+      </component>
+      <component id="2e59f" class="javax.swing.JButton" binding="opCard9">
+        <constraints>
+          <grid row="0" column="8" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="opCard9"/>
+        </properties>
+      </component>
+      <component id="d54d7" class="javax.swing.JButton" binding="opCard10">
+        <constraints>
+          <grid row="0" column="9" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="opCard10"/>
+        </properties>
+      </component>
+      <component id="789ea" class="javax.swing.JButton" binding="_opInPlay1">
+        <constraints>
+          <grid row="3" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="_"/>
+        </properties>
+      </component>
+      <component id="17903" class="javax.swing.JButton" binding="userInPlay1">
+        <constraints>
+          <grid row="4" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="_"/>
+        </properties>
+      </component>
+      <component id="77342" class="javax.swing.JButton" binding="userInPlay2">
+        <constraints>
+          <grid row="4" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="_"/>
+        </properties>
+      </component>
+      <component id="a97bd" class="javax.swing.JButton" binding="_opInPlay2">
+        <constraints>
+          <grid row="3" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="_"/>
+        </properties>
+      </component>
+      <component id="dafdb" class="javax.swing.JButton" binding="__opInPlay3">
+        <constraints>
+          <grid row="3" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="_"/>
+        </properties>
+      </component>
+      <component id="2174e" class="javax.swing.JButton" binding="userInPlay3">
+        <constraints>
+          <grid row="4" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="_"/>
+        </properties>
+      </component>
+      <component id="6b013" class="javax.swing.JButton" binding="__opInPlay4">
+        <constraints>
+          <grid row="3" column="5" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="_"/>
+        </properties>
+      </component>
+      <component id="9968f" class="javax.swing.JButton" binding="userInPlay4">
+        <constraints>
+          <grid row="4" column="5" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="_"/>
+        </properties>
+      </component>
+      <component id="8bfd" class="javax.swing.JButton" binding="__opInPlay5">
+        <constraints>
+          <grid row="3" column="6" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="_"/>
+        </properties>
+      </component>
+      <component id="e90fc" class="javax.swing.JButton" binding="userInPlay5">
+        <constraints>
+          <grid row="4" column="6" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="_"/>
+        </properties>
+      </component>
+      <component id="c3296" class="javax.swing.JButton" binding="__opInPlay6">
+        <constraints>
+          <grid row="3" column="7" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="_"/>
+        </properties>
+      </component>
+      <component id="eb6ae" class="javax.swing.JButton" binding="userInPlay6">
+        <constraints>
+          <grid row="4" column="7" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="_"/>
+        </properties>
+      </component>
+    </children>
+  </grid>
+</form>
