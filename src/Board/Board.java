@@ -1,5 +1,9 @@
 package Board;
 import javax.swing.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import Player.Player;
+import sun.misc.Launcher;
 
 /**
  * Created by 18rpaolucci on 9/25/2017.
@@ -50,14 +54,83 @@ public class Board {
     private JButton opCard9;
     private JButton opCard10;
     private JLabel opHealth;
-    private JFrame mainFrame = new JFrame("Magi-Duel Alpha Client");
+    private JFrame mainFrame = new JFrame("Magi-Duel Alpha GameClient");
+
 
     public Board(){
+
         this.mainFrame.setContentPane(this.getMainPanel());
         this.mainFrame.pack();
         this.mainFrame.setVisible(true);
         this.mainFrame.setResizable(true);
         this.mainFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+
+
+
+        userCard1.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                if (true){
+
+                }
+            }
+        });
+        userCard2.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
+            }
+        });
+        userCard3.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
+            }
+        });
+        userCard4.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
+            }
+        });
+        userCard5.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
+            }
+        });
+        userCard6.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
+            }
+        });
+        userCard7.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
+            }
+        });
+        userCard8.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
+            }
+        });
+        userCard9.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
+            }
+        });
+        userCard10.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
+            }
+        });
+
     }
 
     private void createUIComponents() {

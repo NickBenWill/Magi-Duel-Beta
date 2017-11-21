@@ -15,20 +15,20 @@ import javax.imageio.ImageIO;
 /**
  * Created by 18nbenjung on 9/26/2017.
  */
-public class Launcher {
+public class GameClient {
 
     static Board board = new Board();
     static Player player1 = new Player();
     static Player player2 = new Player();
-    static Launcher l = new Launcher(); //this is the instant that everything should be referencing "l";
-
+    public static GameClient gc = new GameClient(); //this is the instant that everything should be referencing "gc";
+    private static boolean player1turn = true;
 
 
     public static void main(String args[]){
         boolean isWon = false;
         boolean player1turn = true;
-        l.assignDecks(player1, 1);
-        l.assignDecks(player2, 1);
+        gc.assignDecks(player1, 1);
+        gc.assignDecks(player2, 1);
         player1.getDeck().shuffleDeck();
         player2.getDeck().shuffleDeck();
         for (int i = 0; i < 10; i ++){
@@ -36,10 +36,9 @@ public class Launcher {
             player2.getDeck().drawCard();
         }
 
-        l.refreshBoard();
+        gc.refreshBoard();
     while (isWon = false){
         if (player1turn = true){
-
 
         }
         else{
@@ -109,5 +108,14 @@ public class Launcher {
 
 
     }
+    public void setPlayer1turn(boolean set){
+        player1turn = set;
+    }
+
+    public boolean getPlayer1turn(){
+        return player1turn;
+    }
+
+
 }
 
