@@ -39,7 +39,7 @@ public class GameClient {
         gc.refreshBoard();
     while (isWon = false){
         if (player1turn = true){
-
+    break;
         }
         else{
 
