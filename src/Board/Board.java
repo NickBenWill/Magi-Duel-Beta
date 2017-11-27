@@ -55,7 +55,7 @@ public class Board {
     private JButton opCard10;
     private JLabel opHealth;
     private JFrame mainFrame = new JFrame("Magi-Duel Alpha GameClient");
-
+    public static boolean playerDeciding = true;
 
     public Board(){
 

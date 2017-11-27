@@ -24,9 +24,10 @@ public class GameClient {
     private static boolean player1turn = true;
 
 
+
     public static void main(String args[]){
         boolean isWon = false;
-        boolean player1turn = true;
+        int currentTurnCount = 1;
         gc.assignDecks(player1, 1);
         gc.assignDecks(player2, 1);
         player1.getDeck().shuffleDeck();
@@ -39,7 +40,10 @@ public class GameClient {
         gc.refreshBoard();
     while (isWon = false){
         if (player1turn = true){
-    break;
+            while (Board.playerDeciding == true){
+                try{Thread.sleep(1000);}
+                catch(InterruptedException ex) {Thread.currentThread().interrupt();}
+            }
         }
         else{
 
