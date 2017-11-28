@@ -73,7 +73,7 @@ public class Board {
             @Override
             public void actionPerformed(ActionEvent e) {
                 if (gameClient.getPlayer1turn()){
-
+                    System.out.println("It works praise jebus");
                 }
             }
         });
