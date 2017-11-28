@@ -1,4 +1,5 @@
-import Board.Board;
+package Board;
+
 import Player.Player;
 import Card.Card;
 
@@ -17,10 +18,11 @@ import javax.imageio.ImageIO;
  */
 public class GameClient {
 
-    static Board board = new Board();
+
     static Player player1 = new Player();
     static Player player2 = new Player();
     public static GameClient gc = new GameClient(); //this is the instant that everything should be referencing "gc";
+    static Board board = new Board(gc);
     private static boolean player1turn = true;
 
 
@@ -44,6 +46,7 @@ public class GameClient {
                 try{Thread.sleep(1000);}
                 catch(InterruptedException ex) {Thread.currentThread().interrupt();}
             }
+
         }
         else{
 

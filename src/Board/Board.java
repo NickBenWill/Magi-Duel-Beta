@@ -54,11 +54,12 @@ public class Board {
     private JButton opCard9;
     private JButton opCard10;
     private JLabel opHealth;
-    private JFrame mainFrame = new JFrame("Magi-Duel Alpha GameClient");
+    private JFrame mainFrame = new JFrame("Magi-Duel Alpha Board.GameClient");
     public static boolean playerDeciding = true;
+    private GameClient gameClient;
 
-    public Board(){
-
+    public Board(GameClient gameClient){
+        this.gameClient = gameClient;
         this.mainFrame.setContentPane(this.getMainPanel());
         this.mainFrame.pack();
         this.mainFrame.setVisible(true);
@@ -71,7 +72,7 @@ public class Board {
         userCard1.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                if (true){
+                if (gameClient.getPlayer1turn()){
 
                 }
             }
