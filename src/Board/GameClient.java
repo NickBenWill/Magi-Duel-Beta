@@ -3,9 +3,12 @@ package Board;
 import Player.Player;
 import Card.Card;
 
-import java.awt.*;
+import java.awt.Image;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.awt.image.BufferedImage;
+import javax.imageio.*;
+import java.io.File;
 import Card.Deck;
 import Card.CardTypeE;
 import CardLibrary.OverheadStrike;
@@ -84,17 +87,17 @@ public class GameClient {
 
         switch(deckNum){
             case 1:
-                Image i=null;
+                BufferedImage i=null;
                 ArrayList<Card> temp = new ArrayList<Card>();
                 try {
-                    i = ImageIO.read(getClass().getResource("resources/2C.png"));
+                    i = ImageIO.read(GameClient.class.getResourceAsStream("/Resources/2C.png"));
                 }
                 catch(IOException ie){
                     ie.printStackTrace();
                 }
                 Card StormSurge = new StormSurge("Storm Surge", "Pirateboi", CardTypeE.COUNTER, i);
                 try {
-                    i = ImageIO.read(getClass().getResource("resources/2D.png"));
+                    i = ImageIO.read(GameClient.class.getResourceAsStream("/Resources/2D.png"));
                 }
                 catch(IOException ie){
                     ie.printStackTrace();
