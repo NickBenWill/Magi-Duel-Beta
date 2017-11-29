@@ -35,4 +35,10 @@ public class Card
     }
     public Image getCardImage() {return cardImage;}
     public void setCardImage(Image cardImage) {this.cardImage = cardImage;}
+    public CardTypeE getCardTypeE() {
+        return cardTypeE;
+    }
+    public void setCardTypeE(CardTypeE cardTypeE) {
+        this.cardTypeE = cardTypeE;
+    }
 }

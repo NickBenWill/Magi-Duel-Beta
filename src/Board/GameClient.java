@@ -37,7 +37,7 @@ public class GameClient {
         }
 
         gc.refreshBoard();
-    while (isWon = false){
+    while (!isWon){
         if (player1turn = true){
             while (Board.playerDeciding == true){
                 try{Thread.sleep(1000);}
@@ -79,7 +79,7 @@ public class GameClient {
         board.getOpCard9().setText(player2.getDeck().getCardsInHand().get(8).getName());
         board.getOpCard10().setText(player2.getDeck().getCardsInHand().get(9).getName());
         // refresh imageIcons for Player 1's cards
-        board.getUserCard1().setIcon(new ImageIcon(player1.getDeck().getCardsInHand().get(0).getCardImage()));
+        /*board.getUserCard1().setIcon(new ImageIcon(player1.getDeck().getCardsInHand().get(0).getCardImage()));
         board.getUserCard2().setIcon(new ImageIcon(player1.getDeck().getCardsInHand().get(1).getCardImage()));
         board.getUserCard3().setIcon(new ImageIcon(player1.getDeck().getCardsInHand().get(2).getCardImage()));
         board.getUserCard4().setIcon(new ImageIcon(player1.getDeck().getCardsInHand().get(3).getCardImage()));
@@ -99,7 +99,7 @@ public class GameClient {
         board.getOpCard7().setIcon(new ImageIcon(player2.getDeck().getCardsInHand().get(6).getCardImage()));
         board.getOpCard8().setIcon(new ImageIcon(player2.getDeck().getCardsInHand().get(7).getCardImage()));
         board.getOpCard9().setIcon(new ImageIcon(player2.getDeck().getCardsInHand().get(8).getCardImage()));
-        board.getOpCard10().setIcon(new ImageIcon(player2.getDeck().getCardsInHand().get(9).getCardImage()));
+        board.getOpCard10().setIcon(new ImageIcon(player2.getDeck().getCardsInHand().get(9).getCardImage())); */
     }
 
     public void assignDecks(Player playerToAssign, int deckNum) {

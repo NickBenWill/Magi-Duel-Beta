@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="c347685f-7b83-49c9-8fce-b33792921cef" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Board/Board.java" afterPath="$PROJECT_DIR$/src/Board/Board.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Board/GameClient.java" afterPath="$PROJECT_DIR$/src/Board/GameClient.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Card/Card.java" afterPath="$PROJECT_DIR$/src/Card/Card.java" />
     </list>
@@ -25,11 +26,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Board.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Board.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Board/Board.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="71" column="40" selection-start-line="71" selection-start-column="40" selection-end-line="71" selection-end-column="40" />
+            <state relative-caret-position="255">
+              <caret line="76" column="91" selection-start-line="76" selection-start-column="91" selection-end-line="76" selection-end-column="91" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -62,22 +63,36 @@
       <file leaf-file-name="Card.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Card/Card.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="21" column="5" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="5" />
+            <state relative-caret-position="374">
+              <caret line="38" column="24" selection-start-line="38" selection-start-column="24" selection-end-line="38" selection-end-column="24" />
+              <folding>
+                <element signature="e#905#906#0" expanded="true" />
+                <element signature="e#937#938#0" expanded="true" />
+                <element signature="e#989#990#0" expanded="true" />
+                <element signature="e#1031#1032#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CardTypeE.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Card/CardTypeE.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="8" column="10" selection-start-line="8" selection-start-column="10" selection-end-line="8" selection-end-column="10" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GameClient.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="GameClient.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Board/GameClient.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-102">
-              <caret line="9" column="70" selection-start-line="9" selection-start-column="70" selection-end-line="9" selection-end-column="70" />
+            <state relative-caret-position="556">
+              <caret line="101" column="112" selection-start-line="101" selection-start-column="112" selection-end-line="101" selection-end-column="112" />
               <folding>
-                <element signature="method#main#0;class#GameClient#0" expanded="false" />
-                <element signature="method#refreshBoard#0;class#GameClient#0" expanded="false" />
-                <element signature="method#assignDecks#0;class#GameClient#0" expanded="false" />
+                <element signature="imports" expanded="true" />
+                <marker date="1511984350399" expanded="false" signature="5927:7127" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -158,9 +173,9 @@
         <option value="$PROJECT_DIR$/src/Initializer.java" />
         <option value="$PROJECT_DIR$/src/Card/Asset.java" />
         <option value="$PROJECT_DIR$/src/GameClient.java" />
-        <option value="$PROJECT_DIR$/src/Board/Board.java" />
         <option value="$PROJECT_DIR$/src/Card/Card.java" />
         <option value="$PROJECT_DIR$/src/Board/GameClient.java" />
+        <option value="$PROJECT_DIR$/src/Board/Board.java" />
       </list>
     </option>
   </component>
@@ -670,7 +685,14 @@
       <option name="project" value="LOCAL" />
       <updated>1511982802515</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Board's card images now set to update with refreshBoard. Imports organized and simplified. Now moving to set up initial game logic">
+      <created>1511983641065</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1511983641065</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -718,11 +740,12 @@
     <MESSAGE value="Can't reference GameClient as object&#10;" />
     <MESSAGE value="Game Client issue fixed, can now reference in Board." />
     <MESSAGE value="Image reading from Resources fixed. Moving on to pathing of board's card images" />
-    <option name="LAST_COMMIT_MESSAGE" value="Image reading from Resources fixed. Moving on to pathing of board's card images" />
+    <MESSAGE value="Board's card images now set to update with refreshBoard. Imports organized and simplified. Now moving to set up initial game logic" />
+    <option name="LAST_COMMIT_MESSAGE" value="Board's card images now set to update with refreshBoard. Imports organized and simplified. Now moving to set up initial game logic" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="1" />
+      <option name="time" value="3" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -960,13 +983,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Card/CardTypeE.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="12" selection-start-line="5" selection-start-column="12" selection-end-line="5" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Card/Strike.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
@@ -1063,16 +1079,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Board/Board.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="71" column="40" selection-start-line="71" selection-start-column="40" selection-end-line="71" selection-end-column="40" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Board/Board.form">
       <provider selected="true" editor-type-id="ui-designer">
         <state />
@@ -1086,20 +1092,42 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Card/Card.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="21" column="5" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="5" />
+        <state relative-caret-position="374">
+          <caret line="38" column="24" selection-start-line="38" selection-start-column="24" selection-end-line="38" selection-end-column="24" />
+          <folding>
+            <element signature="e#905#906#0" expanded="true" />
+            <element signature="e#937#938#0" expanded="true" />
+            <element signature="e#989#990#0" expanded="true" />
+            <element signature="e#1031#1032#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Card/CardTypeE.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="10" selection-start-line="8" selection-start-column="10" selection-end-line="8" selection-end-column="10" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Board/GameClient.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-102">
-          <caret line="9" column="70" selection-start-line="9" selection-start-column="70" selection-end-line="9" selection-end-column="70" />
+        <state relative-caret-position="556">
+          <caret line="101" column="112" selection-start-line="101" selection-start-column="112" selection-end-line="101" selection-end-column="112" />
           <folding>
-            <element signature="method#main#0;class#GameClient#0" expanded="false" />
-            <element signature="method#refreshBoard#0;class#GameClient#0" expanded="false" />
-            <element signature="method#assignDecks#0;class#GameClient#0" expanded="false" />
+            <element signature="imports" expanded="true" />
+            <marker date="1511984350399" expanded="false" signature="5927:7127" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Board/Board.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="76" column="91" selection-start-line="76" selection-start-column="91" selection-end-line="76" selection-end-column="91" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>

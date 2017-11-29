@@ -73,7 +73,12 @@ public class Board {
             @Override
             public void actionPerformed(ActionEvent e) {
                 if (gameClient.getPlayer1turn()){
-                    System.out.println("It works praise jebus");
+                    System.out.println("Ok it kinda works");
+                    if (GameClient.player1.getDeck().getCardsInHand().get(0).getCardTypeE(){
+                        System.out.println("It works praise jebus");
+                    }
+
+
                 }
             }
         });
