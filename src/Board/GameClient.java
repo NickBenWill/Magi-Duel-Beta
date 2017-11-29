@@ -1,34 +1,28 @@
 package Board;
-
 import Player.Player;
 import Card.Card;
-
-import java.awt.Image;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.awt.image.BufferedImage;
-import javax.imageio.*;
-import java.io.File;
 import Card.Deck;
 import Card.CardTypeE;
-import CardLibrary.OverheadStrike;
-import CardLibrary.StormSurge;
+
+// the mega-ton import for every card in CardLibrary. Luna help us all
+import CardLibrary.*;
 
 import javax.imageio.ImageIO;
+import javax.swing.*;
 
 /**
  * Created by 18nbenjung on 9/26/2017.
  */
 public class GameClient {
 
-
     static Player player1 = new Player();
     static Player player2 = new Player();
     public static GameClient gc = new GameClient(); //this is the instant that everything should be referencing "gc";
     static Board board = new Board(gc);
     private static boolean player1turn = true;
-
-
 
     public static void main(String args[]){
         boolean isWon = false;
@@ -59,8 +53,10 @@ public class GameClient {
     }
 
     public void refreshBoard(){
+        // refresh health labels
         board.getUserHealth().setText("Your Health: " + player1.getPlayerHealth());
         board.getOpHealth().setText("Opponent's Health: " + player2.getPlayerHealth());
+        // refresh names of Player 1's cards
         board.getUserCard1().setText(player1.getDeck().getCardsInHand().get(0).getName());
         board.getUserCard2().setText(player1.getDeck().getCardsInHand().get(1).getName());
         board.getUserCard3().setText(player1.getDeck().getCardsInHand().get(2).getName());
@@ -71,6 +67,7 @@ public class GameClient {
         board.getUserCard8().setText(player1.getDeck().getCardsInHand().get(7).getName());
         board.getUserCard9().setText(player1.getDeck().getCardsInHand().get(8).getName());
         board.getUserCard10().setText(player1.getDeck().getCardsInHand().get(9).getName());
+        // refresh names of Player 2's cards
         board.getOpCard1().setText(player2.getDeck().getCardsInHand().get(0).getName());
         board.getOpCard2().setText(player2.getDeck().getCardsInHand().get(1).getName());
         board.getOpCard3().setText(player2.getDeck().getCardsInHand().get(2).getName());
@@ -81,6 +78,28 @@ public class GameClient {
         board.getOpCard8().setText(player2.getDeck().getCardsInHand().get(7).getName());
         board.getOpCard9().setText(player2.getDeck().getCardsInHand().get(8).getName());
         board.getOpCard10().setText(player2.getDeck().getCardsInHand().get(9).getName());
+        // refresh imageIcons for Player 1's cards
+        board.getUserCard1().setIcon(new ImageIcon(player1.getDeck().getCardsInHand().get(0).getCardImage()));
+        board.getUserCard2().setIcon(new ImageIcon(player1.getDeck().getCardsInHand().get(1).getCardImage()));
+        board.getUserCard3().setIcon(new ImageIcon(player1.getDeck().getCardsInHand().get(2).getCardImage()));
+        board.getUserCard4().setIcon(new ImageIcon(player1.getDeck().getCardsInHand().get(3).getCardImage()));
+        board.getUserCard5().setIcon(new ImageIcon(player1.getDeck().getCardsInHand().get(4).getCardImage()));
+        board.getUserCard6().setIcon(new ImageIcon(player1.getDeck().getCardsInHand().get(5).getCardImage()));
+        board.getUserCard7().setIcon(new ImageIcon(player1.getDeck().getCardsInHand().get(6).getCardImage()));
+        board.getUserCard8().setIcon(new ImageIcon(player1.getDeck().getCardsInHand().get(7).getCardImage()));
+        board.getUserCard9().setIcon(new ImageIcon(player1.getDeck().getCardsInHand().get(8).getCardImage()));
+        board.getUserCard10().setIcon(new ImageIcon(player1.getDeck().getCardsInHand().get(9).getCardImage()));
+        // refresh imageIcons for Player 2's cards
+        board.getOpCard1().setIcon(new ImageIcon(player2.getDeck().getCardsInHand().get(0).getCardImage()));
+        board.getOpCard2().setIcon(new ImageIcon(player2.getDeck().getCardsInHand().get(1).getCardImage()));
+        board.getOpCard3().setIcon(new ImageIcon(player2.getDeck().getCardsInHand().get(2).getCardImage()));
+        board.getOpCard4().setIcon(new ImageIcon(player2.getDeck().getCardsInHand().get(3).getCardImage()));
+        board.getOpCard5().setIcon(new ImageIcon(player2.getDeck().getCardsInHand().get(4).getCardImage()));
+        board.getOpCard6().setIcon(new ImageIcon(player2.getDeck().getCardsInHand().get(5).getCardImage()));
+        board.getOpCard7().setIcon(new ImageIcon(player2.getDeck().getCardsInHand().get(6).getCardImage()));
+        board.getOpCard8().setIcon(new ImageIcon(player2.getDeck().getCardsInHand().get(7).getCardImage()));
+        board.getOpCard9().setIcon(new ImageIcon(player2.getDeck().getCardsInHand().get(8).getCardImage()));
+        board.getOpCard10().setIcon(new ImageIcon(player2.getDeck().getCardsInHand().get(9).getCardImage()));
     }
 
     public void assignDecks(Player playerToAssign, int deckNum) {
@@ -118,6 +137,7 @@ public class GameClient {
 
 
     }
+
     public void setPlayer1turn(boolean set){
         player1turn = set;
     }
@@ -125,7 +145,6 @@ public class GameClient {
     public boolean getPlayer1turn(){
         return player1turn;
     }
-
 
 }
 

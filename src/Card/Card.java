@@ -16,6 +16,8 @@ public class Card
     public Card(String name, String cardClass, CardTypeE cardTypeE, Image cardImage){
         this.cardName = name;
         this.cardClass = cardClass;
+        this.cardImage = cardImage;
+        this.cardTypeE = cardTypeE;
 
     }
 
@@ -31,11 +33,6 @@ public class Card
     String getCardClass(){
         return this.cardClass;
     }
-    void setImage(Image image){
-        this.cardImage = image;
-    }
-    Image getImage(){
-        return this.cardImage;
-    }
-
+    public Image getCardImage() {return cardImage;}
+    public void setCardImage(Image cardImage) {this.cardImage = cardImage;}
 }
