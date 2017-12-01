@@ -25,6 +25,7 @@ public class GameClient {
     private static boolean player1turn = true;
 
     public static void main(String args[]){
+        board.testCallAll();
         boolean isWon = false;
         int currentTurnCount = 1;
         gc.assignDecks(player1, 1);

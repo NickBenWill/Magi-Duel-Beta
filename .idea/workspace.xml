@@ -5,7 +5,7 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Board/Board.java" afterPath="$PROJECT_DIR$/src/Board/Board.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Board/GameClient.java" afterPath="$PROJECT_DIR$/src/Board/GameClient.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Card/Card.java" afterPath="$PROJECT_DIR$/src/Card/Card.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/CardLibrary/OverheadStrike.java" afterPath="$PROJECT_DIR$/src/CardLibrary/OverheadStrike.java" />
     </list>
     <ignored path="Magi-Duel.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -29,11 +29,44 @@
       <file leaf-file-name="Board.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Board/Board.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="76" column="91" selection-start-line="76" selection-start-column="91" selection-end-line="76" selection-end-column="91" />
+            <state relative-caret-position="162">
+              <caret line="74" column="44" selection-start-line="74" selection-start-column="44" selection-end-line="74" selection-end-column="44" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Strike.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Card/Strike.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="204">
+              <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="OverheadStrike.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/CardLibrary/OverheadStrike.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="323">
+              <caret line="30" column="37" selection-start-line="30" selection-start-column="37" selection-end-line="30" selection-end-column="37" />
+              <folding>
+                <element signature="e#873#874#0" expanded="true" />
+                <element signature="e#917#918#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="StrikeI.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Card/StrikeI.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="238">
+              <caret line="14" column="55" selection-start-line="14" selection-start-column="55" selection-end-line="14" selection-end-column="55" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -50,20 +83,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Deck.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Card/Deck.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="680">
-              <caret line="43" column="61" selection-start-line="43" selection-start-column="61" selection-end-line="43" selection-end-column="61" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="Card.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Card/Card.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
+            <state relative-caret-position="476">
               <caret line="38" column="24" selection-start-line="38" selection-start-column="24" selection-end-line="38" selection-end-column="24" />
               <folding>
                 <element signature="e#905#906#0" expanded="true" />
@@ -88,11 +111,10 @@
       <file leaf-file-name="GameClient.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Board/GameClient.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="556">
-              <caret line="101" column="112" selection-start-line="101" selection-start-column="112" selection-end-line="101" selection-end-column="112" />
+            <state relative-caret-position="162">
+              <caret line="27" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <marker date="1511984350399" expanded="false" signature="5927:7127" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -100,16 +122,9 @@
       </file>
       <file leaf-file-name="Board.form" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Board/Board.form">
-          <provider selected="true" editor-type-id="ui-designer">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Asset.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Card/Asset.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -164,8 +179,6 @@
         <option value="$PROJECT_DIR$/src/Card/StrikeI.java" />
         <option value="$PROJECT_DIR$/src/CardLibrary/FlowingJabs.java" />
         <option value="$PROJECT_DIR$/src/CardLibrary/MoonlitWaltz.java" />
-        <option value="$PROJECT_DIR$/src/CardLibrary/OverheadStrike.java" />
-        <option value="$PROJECT_DIR$/src/CardLibrary/WickedFandango.java" />
         <option value="$PROJECT_DIR$/src/Board/Board.form" />
         <option value="$PROJECT_DIR$/src/Player/Player.java" />
         <option value="$PROJECT_DIR$/src/Card/Deck.java" />
@@ -174,8 +187,10 @@
         <option value="$PROJECT_DIR$/src/Card/Asset.java" />
         <option value="$PROJECT_DIR$/src/GameClient.java" />
         <option value="$PROJECT_DIR$/src/Card/Card.java" />
-        <option value="$PROJECT_DIR$/src/Board/GameClient.java" />
         <option value="$PROJECT_DIR$/src/Board/Board.java" />
+        <option value="$PROJECT_DIR$/src/CardLibrary/WickedFandango.java" />
+        <option value="$PROJECT_DIR$/src/CardLibrary/OverheadStrike.java" />
+        <option value="$PROJECT_DIR$/src/Board/GameClient.java" />
       </list>
     </option>
   </component>
@@ -210,6 +225,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -344,7 +360,6 @@
       </pane>
       <pane id="Scope" />
       <pane id="Scratches" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -692,7 +707,14 @@
       <option name="project" value="LOCAL" />
       <updated>1511983641065</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Logic impass: Cannot determind enum value of card in cardsInHand. Please advise.">
+      <created>1511984509959</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1511984509959</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -741,7 +763,8 @@
     <MESSAGE value="Game Client issue fixed, can now reference in Board." />
     <MESSAGE value="Image reading from Resources fixed. Moving on to pathing of board's card images" />
     <MESSAGE value="Board's card images now set to update with refreshBoard. Imports organized and simplified. Now moving to set up initial game logic" />
-    <option name="LAST_COMMIT_MESSAGE" value="Board's card images now set to update with refreshBoard. Imports organized and simplified. Now moving to set up initial game logic" />
+    <MESSAGE value="Logic impass: Cannot determind enum value of card in cardsInHand. Please advise." />
+    <option name="LAST_COMMIT_MESSAGE" value="Logic impass: Cannot determind enum value of card in cardsInHand. Please advise." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -983,13 +1006,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Card/Strike.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Card/Counter.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
@@ -997,31 +1013,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Card/StrikeI.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="55" selection-start-line="14" selection-start-column="55" selection-end-line="14" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/CardLibrary/StormSurge.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/CardLibrary/OverheadStrike.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="663">
-          <caret line="44" column="41" selection-start-line="44" selection-start-column="41" selection-end-line="44" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/CardLibrary/WickedFandango.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="748">
-          <caret line="49" column="0" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -1080,19 +1075,19 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Board/Board.form">
-      <provider selected="true" editor-type-id="ui-designer">
-        <state />
-      </provider>
-      <provider editor-type-id="text-editor">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
+      <provider editor-type-id="ui-designer">
+        <state />
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Card/Card.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
+        <state relative-caret-position="476">
           <caret line="38" column="24" selection-start-line="38" selection-start-column="24" selection-end-line="38" selection-end-column="24" />
           <folding>
             <element signature="e#905#906#0" expanded="true" />
@@ -1111,21 +1106,55 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Card/StrikeI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="55" selection-start-line="14" selection-start-column="55" selection-end-line="14" selection-end-column="55" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/CardLibrary/WickedFandango.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="35" column="8" selection-start-line="35" selection-start-column="8" selection-end-line="35" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/CardLibrary/OverheadStrike.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="30" column="37" selection-start-line="30" selection-start-column="37" selection-end-line="30" selection-end-column="37" />
+          <folding>
+            <element signature="e#873#874#0" expanded="true" />
+            <element signature="e#917#918#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Card/Strike.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Board/GameClient.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="556">
-          <caret line="101" column="112" selection-start-line="101" selection-start-column="112" selection-end-line="101" selection-end-column="112" />
+        <state relative-caret-position="162">
+          <caret line="27" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <marker date="1511984350399" expanded="false" signature="5927:7127" ph="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Board/Board.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="76" column="91" selection-start-line="76" selection-start-column="91" selection-end-line="76" selection-end-column="91" />
+        <state relative-caret-position="162">
+          <caret line="74" column="44" selection-start-line="74" selection-start-column="44" selection-end-line="74" selection-end-column="44" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

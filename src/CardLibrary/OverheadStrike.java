@@ -28,7 +28,7 @@ public class OverheadStrike extends Strike implements StrikeI{
 
     @Override
     public void damageHealed(Player playerReceivingHeal) {
-
+        System.out.println("Called");
     }
 
     @Override

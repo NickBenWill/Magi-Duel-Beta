@@ -2,6 +2,15 @@ package Board;
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
+import java.util.ArrayList;
+
+import Card.*;
+
+import Card.CardTypeE;
+import CardLibrary.OverheadStrike;
+import CardLibrary.WickedFandango;
 import Player.Player;
 import sun.misc.Launcher;
 
@@ -58,6 +67,21 @@ public class Board {
     public static boolean playerDeciding = true;
     private GameClient gameClient;
 
+    static void testCallAll(){
+        Method[] methods = StrikeI.class.getDeclaredMethods();
+        for (Method method : methods) {
+            try {
+                Card OverheadStrike = new OverheadStrike("Overhead Strike", "Pirateboi", CardTypeE.STRIKE, null, 8);
+                method.invoke(OverheadStrike);
+            }catch (IllegalAccessException ie){
+                ie.printStackTrace();
+            }
+            catch (InvocationTargetException ite){
+                ite.printStackTrace();
+            }
+        }
+    }
+
     public Board(GameClient gameClient){
         this.gameClient = gameClient;
         this.mainFrame.setContentPane(this.getMainPanel());
@@ -74,8 +98,21 @@ public class Board {
             public void actionPerformed(ActionEvent e) {
                 if (gameClient.getPlayer1turn()){
                     System.out.println("Ok it kinda works");
-                    if (GameClient.player1.getDeck().getCardsInHand().get(0).getCardTypeE(){
+                    if (GameClient.player1.getDeck().getCardsInHand().get(0).getCardTypeE() == CardTypeE.STRIKE){
                         System.out.println("It works praise jebus");
+                        Method[] methods = StrikeI.class.getDeclaredMethods();
+                        for (Method method : methods) {
+                            try {
+                                method.invoke(GameClient.player1.getDeck().getCardsInHand().get(0));
+                            }catch (IllegalAccessException ie){
+                                ie.printStackTrace();
+                            }
+                            catch (InvocationTargetException ite){
+                                ite.printStackTrace();
+                            }
+                        }
+
+
                     }
 
 
