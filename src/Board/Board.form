@@ -375,6 +375,22 @@
           <text value="_"/>
         </properties>
       </component>
+      <component id="b445c" class="javax.swing.JButton" binding="Pass">
+        <constraints>
+          <grid row="4" column="9" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Pass Turn"/>
+        </properties>
+      </component>
+      <component id="c5f28" class="javax.swing.JButton" binding="opPass">
+        <constraints>
+          <grid row="3" column="9" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Pass Turn"/>
+        </properties>
+      </component>
     </children>
   </grid>
 </form>

@@ -63,8 +63,10 @@ public class Board {
     private JButton opCard9;
     private JButton opCard10;
     private JLabel opHealth;
+    private JButton Pass;
+    private JButton opPass;
     private JFrame mainFrame = new JFrame("Magi-Duel Alpha Board.GameClient");
-    public static boolean playerDeciding = true;
+
     private GameClient gameClient;
 
     static void testCallAll(){
@@ -96,11 +98,9 @@ public class Board {
         userCard1.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                if (gameClient.getPlayer1turn()){
-                    System.out.println("Ok it kinda works");
+                if (gameClient.getPlayer1Deciding()){
                     if (GameClient.player1.getDeck().getCardsInHand().get(0).getCardTypeE() == CardTypeE.STRIKE){
-                        System.out.println("It works praise jebus");
-                        Method[] methods = StrikeI.class.getDeclaredMethods();
+                        /*Method[] methods = StrikeI.class.getDeclaredMethods();
                         for (Method method : methods) {
                             try {
                                 method.invoke(GameClient.player1.getDeck().getCardsInHand().get(0));
@@ -110,9 +110,7 @@ public class Board {
                             catch (InvocationTargetException ite){
                                 ite.printStackTrace();
                             }
-                        }
-
-
+                        }*/
                     }
 
 
@@ -536,4 +534,12 @@ public class Board {
     public JLabel getOpHealth() {return opHealth;}
 
     public void setOpHealth(JLabel opHealth) {this.opHealth = opHealth;}
+
+    public JButton getPass() {return Pass;}
+
+    public void setPass(JButton pass) {Pass = pass;}
+
+    public JButton getOpPass() {return opPass;}
+
+    public void setOpPass(JButton opPass) {this.opPass = opPass;}
 }

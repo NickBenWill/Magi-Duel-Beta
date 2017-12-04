@@ -22,7 +22,10 @@ public class GameClient {
     static Player player2 = new Player();
     public static GameClient gc = new GameClient(); //this is the instant that everything should be referencing "gc";
     static Board board = new Board(gc);
-    private static boolean player1turn = true;
+    public static boolean player1Deciding = true;
+    public static boolean player2Blocking = false;
+    public static boolean player2Deciding = false;
+    public static boolean player1Blocking = false;
 
     public static void main(String args[]){
         board.testCallAll();
@@ -38,19 +41,43 @@ public class GameClient {
         }
 
         gc.refreshBoard();
-    while (!isWon){
-        if (player1turn = true){
-            while (Board.playerDeciding == true){
-                try{Thread.sleep(1000);}
-                catch(InterruptedException ex) {Thread.currentThread().interrupt();}
+        while (!isWon){
+            while (player1Deciding){
+                    try{Thread.sleep(1000);}
+                    catch(InterruptedException ex) {Thread.currentThread().interrupt();}
+
+
+            }
+            while (player2Deciding){
+
             }
 
         }
-        else{
-
-
-        }
     }
+
+    public void cycleDownTurns(){
+        if(player1Deciding){
+            player1Deciding = false;
+            player2Blocking = true;
+            refreshBoard();
+        }
+        else if(player2Blocking){
+            player2Blocking = false;
+            player2Deciding = true;
+            player2.getDeck().drawCard();
+            refreshBoard();
+        }
+        else if(player2Deciding){
+            player2Deciding = false;
+            player1Blocking = true;
+            refreshBoard();
+        }
+        else if(player1Blocking){
+            player1Blocking = false;
+            player1Deciding = true;
+            player1.getDeck().drawCard();
+            refreshBoard();
+        }
     }
 
     public void refreshBoard(){
@@ -101,6 +128,61 @@ public class GameClient {
         board.getOpCard8().setIcon(new ImageIcon(player2.getDeck().getCardsInHand().get(7).getCardImage()));
         board.getOpCard9().setIcon(new ImageIcon(player2.getDeck().getCardsInHand().get(8).getCardImage()));
         board.getOpCard10().setIcon(new ImageIcon(player2.getDeck().getCardsInHand().get(9).getCardImage())); */
+        if (player1Deciding){
+            board.getOpCard1().setEnabled(false);
+            board.getOpCard2().setEnabled(false);
+            board.getOpCard3().setEnabled(false);
+            board.getOpCard4().setEnabled(false);
+            board.getOpCard5().setEnabled(false);
+            board.getOpCard6().setEnabled(false);
+            board.getOpCard7().setEnabled(false);
+            board.getOpCard8().setEnabled(false);
+            board.getOpCard9().setEnabled(false);
+            board.getOpCard10().setEnabled(false);
+            board.getOpAsset1Button().setEnabled(false);
+            board.getOpAsset2Button().setEnabled(false);
+            board.getOpAsset3Button().setEnabled(false);
+            board.getOpAsset4Button().setEnabled(false);
+            board.getOpAsset5Button().setEnabled(false);
+            board.getOpPass().setEnabled(false);
+
+            if (player1.getDeck().getCardsInHand().get(0).getCardTypeE() == CardTypeE.STRIKE){board.getUserCard1().setEnabled(true);} else{board.getUserCard1().setEnabled(false);}
+            if (player1.getDeck().getCardsInHand().get(1).getCardTypeE() == CardTypeE.STRIKE){board.getUserCard2().setEnabled(true);} else{board.getUserCard2().setEnabled(false);}
+            if (player1.getDeck().getCardsInHand().get(2).getCardTypeE() == CardTypeE.STRIKE){board.getUserCard3().setEnabled(true);} else{board.getUserCard3().setEnabled(false);}
+            if (player1.getDeck().getCardsInHand().get(3).getCardTypeE() == CardTypeE.STRIKE){board.getUserCard4().setEnabled(true);} else{board.getUserCard4().setEnabled(false);}
+            if (player1.getDeck().getCardsInHand().get(4).getCardTypeE() == CardTypeE.STRIKE){board.getUserCard5().setEnabled(true);} else{board.getUserCard5().setEnabled(false);}
+            if (player1.getDeck().getCardsInHand().get(5).getCardTypeE() == CardTypeE.STRIKE){board.getUserCard6().setEnabled(true);} else{board.getUserCard6().setEnabled(false);}
+            if (player1.getDeck().getCardsInHand().get(6).getCardTypeE() == CardTypeE.STRIKE){board.getUserCard7().setEnabled(true);} else{board.getUserCard7().setEnabled(false);}
+            if (player1.getDeck().getCardsInHand().get(7).getCardTypeE() == CardTypeE.STRIKE){board.getUserCard8().setEnabled(true);} else{board.getUserCard8().setEnabled(false);}
+            if (player1.getDeck().getCardsInHand().get(8).getCardTypeE() == CardTypeE.STRIKE){board.getUserCard9().setEnabled(true);} else{board.getUserCard9().setEnabled(false);}
+            if (player1.getDeck().getCardsInHand().get(9).getCardTypeE() == CardTypeE.STRIKE){board.getUserCard10().setEnabled(true);} else{board.getUserCard10().setEnabled(false);}
+
+
+        }
+        if (player2Blocking){
+
+        }
+        if (player2Deciding){
+            board.getUserCard1().setEnabled(false);
+            board.getUserCard2().setEnabled(false);
+            board.getUserCard3().setEnabled(false);
+            board.getUserCard4().setEnabled(false);
+            board.getUserCard5().setEnabled(false);
+            board.getUserCard6().setEnabled(false);
+            board.getUserCard7().setEnabled(false);
+            board.getUserCard8().setEnabled(false);
+            board.getUserCard9().setEnabled(false);
+            board.getUserCard10().setEnabled(false);
+            board.getUserAsset1().setEnabled(false);
+            board.getUserAsset2().setEnabled(false);
+            board.getUserAsset3().setEnabled(false);
+            board.getUserAsset4().setEnabled(false);
+            board.getUserAsset5().setEnabled(false);
+            board.getPass().setEnabled(false);
+        }
+        if (player1Blocking){
+
+        }
     }
 
     public void assignDecks(Player playerToAssign, int deckNum) {
@@ -139,12 +221,12 @@ public class GameClient {
 
     }
 
-    public void setPlayer1turn(boolean set){
-        player1turn = set;
+    public void setPlayer1Deciding(boolean set){
+        player1Deciding = set;
     }
 
-    public boolean getPlayer1turn(){
-        return player1turn;
+    public boolean getPlayer1Deciding(){
+        return player1Deciding;
     }
 
 }

@@ -3,9 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="c347685f-7b83-49c9-8fce-b33792921cef" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Board/Board.form" afterPath="$PROJECT_DIR$/src/Board/Board.form" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Board/Board.java" afterPath="$PROJECT_DIR$/src/Board/Board.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Board/GameClient.java" afterPath="$PROJECT_DIR$/src/Board/GameClient.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/CardLibrary/OverheadStrike.java" afterPath="$PROJECT_DIR$/src/CardLibrary/OverheadStrike.java" />
     </list>
     <ignored path="Magi-Duel.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -26,11 +26,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Board.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Board.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Board/Board.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="162">
-              <caret line="74" column="44" selection-start-line="74" selection-start-column="44" selection-end-line="74" selection-end-column="44" />
+            <state relative-caret-position="305">
+              <caret line="99" column="56" selection-start-line="99" selection-start-column="56" selection-end-line="99" selection-end-column="56" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -51,7 +51,7 @@
       <file leaf-file-name="OverheadStrike.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/CardLibrary/OverheadStrike.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
+            <state relative-caret-position="408">
               <caret line="30" column="37" selection-start-line="30" selection-start-column="37" selection-end-line="30" selection-end-column="37" />
               <folding>
                 <element signature="e#873#874#0" expanded="true" />
@@ -108,13 +108,15 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GameClient.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="GameClient.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Board/GameClient.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="162">
-              <caret line="27" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+            <state relative-caret-position="373">
+              <caret line="143" column="56" selection-start-line="143" selection-start-column="56" selection-end-line="143" selection-end-column="56" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="method#cycleDownTurns#0;class#GameClient#0" expanded="false" />
+                <element signature="method#assignDecks#0;class#GameClient#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -122,11 +124,8 @@
       </file>
       <file leaf-file-name="Board.form" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Board/Board.form">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
+          <provider selected="true" editor-type-id="ui-designer">
+            <state />
           </provider>
         </entry>
       </file>
@@ -179,7 +178,6 @@
         <option value="$PROJECT_DIR$/src/Card/StrikeI.java" />
         <option value="$PROJECT_DIR$/src/CardLibrary/FlowingJabs.java" />
         <option value="$PROJECT_DIR$/src/CardLibrary/MoonlitWaltz.java" />
-        <option value="$PROJECT_DIR$/src/Board/Board.form" />
         <option value="$PROJECT_DIR$/src/Player/Player.java" />
         <option value="$PROJECT_DIR$/src/Card/Deck.java" />
         <option value="$PROJECT_DIR$/src/Launcher.java" />
@@ -187,9 +185,10 @@
         <option value="$PROJECT_DIR$/src/Card/Asset.java" />
         <option value="$PROJECT_DIR$/src/GameClient.java" />
         <option value="$PROJECT_DIR$/src/Card/Card.java" />
-        <option value="$PROJECT_DIR$/src/Board/Board.java" />
         <option value="$PROJECT_DIR$/src/CardLibrary/WickedFandango.java" />
         <option value="$PROJECT_DIR$/src/CardLibrary/OverheadStrike.java" />
+        <option value="$PROJECT_DIR$/src/Board/Board.form" />
+        <option value="$PROJECT_DIR$/src/Board/Board.java" />
         <option value="$PROJECT_DIR$/src/Board/GameClient.java" />
       </list>
     </option>
@@ -225,7 +224,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -360,6 +358,7 @@
       </pane>
       <pane id="Scope" />
       <pane id="Scratches" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -714,7 +713,14 @@
       <option name="project" value="LOCAL" />
       <updated>1511984509959</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Cannot call all methods from Interface">
+      <created>1512150261567</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1512150261567</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -723,12 +729,11 @@
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32985657" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32985657" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29335073" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29335073" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32985657" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -740,6 +745,7 @@
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39895698" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32985657" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -764,7 +770,8 @@
     <MESSAGE value="Image reading from Resources fixed. Moving on to pathing of board's card images" />
     <MESSAGE value="Board's card images now set to update with refreshBoard. Imports organized and simplified. Now moving to set up initial game logic" />
     <MESSAGE value="Logic impass: Cannot determind enum value of card in cardsInHand. Please advise." />
-    <option name="LAST_COMMIT_MESSAGE" value="Logic impass: Cannot determind enum value of card in cardsInHand. Please advise." />
+    <MESSAGE value="Cannot call all methods from Interface" />
+    <option name="LAST_COMMIT_MESSAGE" value="Cannot call all methods from Interface" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1045,7 +1052,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="680">
           <caret line="43" column="61" selection-start-line="43" selection-start-column="61" selection-end-line="43" selection-end-column="61" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1060,7 +1066,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1072,17 +1077,6 @@
             <element signature="imports" expanded="true" />
           </folding>
         </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Board/Board.form">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="ui-designer">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Card/Card.java">
@@ -1118,13 +1112,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
           <caret line="35" column="8" selection-start-line="35" selection-start-column="8" selection-end-line="35" selection-end-column="8" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/CardLibrary/OverheadStrike.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
+        <state relative-caret-position="408">
           <caret line="30" column="37" selection-start-line="30" selection-start-column="37" selection-end-line="30" selection-end-column="37" />
           <folding>
             <element signature="e#873#874#0" expanded="true" />
@@ -1141,22 +1134,35 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Board/GameClient.java">
+    <entry file="file://$PROJECT_DIR$/src/Board/Board.form">
+      <provider selected="true" editor-type-id="ui-designer">
+        <state />
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Board/Board.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="27" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+        <state relative-caret-position="305">
+          <caret line="99" column="56" selection-start-line="99" selection-start-column="56" selection-end-line="99" selection-end-column="56" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Board/Board.java">
+    <entry file="file://$PROJECT_DIR$/src/Board/GameClient.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="74" column="44" selection-start-line="74" selection-start-column="44" selection-end-line="74" selection-end-column="44" />
+        <state relative-caret-position="373">
+          <caret line="143" column="56" selection-start-line="143" selection-start-column="56" selection-end-line="143" selection-end-column="56" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="method#cycleDownTurns#0;class#GameClient#0" expanded="false" />
+            <element signature="method#assignDecks#0;class#GameClient#0" expanded="false" />
           </folding>
         </state>
       </provider>
