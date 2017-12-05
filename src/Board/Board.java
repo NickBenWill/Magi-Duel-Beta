@@ -112,8 +112,9 @@ public class Board {
                             }
                         }*/
                     }
-
-
+                    else if(GameClient.player1.getDeck().getCardsInHand().get(0).getCardTypeE() == CardTypeE.ASSET)
+                    GameClient.player1.getDeck().getAssetsInPlay().add(GameClient.player1.getDeck().getCardsInHand().get(0));
+                    GameClient.player1.getDeck().getCardsInHand().remove(0);
                 }
             }
         });

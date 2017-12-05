@@ -11,7 +11,6 @@ import Card.CardTypeE;
 import CardLibrary.*;
 
 import javax.imageio.ImageIO;
-import javax.swing.*;
 
 /**
  * Created by 18nbenjung on 9/26/2017.
@@ -26,6 +25,8 @@ public class GameClient {
     public static boolean player2Blocking = false;
     public static boolean player2Deciding = false;
     public static boolean player1Blocking = false;
+    public static boolean player1Fighting = true;
+    public static boolean player2Fighting = false;
 
     public static void main(String args[]){
         board.testCallAll();
@@ -46,7 +47,6 @@ public class GameClient {
                     try{Thread.sleep(1000);}
                     catch(InterruptedException ex) {Thread.currentThread().interrupt();}
 
-
             }
             while (player2Deciding){
 
@@ -56,27 +56,29 @@ public class GameClient {
     }
 
     public void cycleDownTurns(){
-        if(player1Deciding){
-            player1Deciding = false;
-            player2Blocking = true;
-            refreshBoard();
+        while(player1Fighting) {
+            if (player1Deciding) {
+                player1Deciding = false;
+                player2Blocking = true;
+                refreshBoard();
+            } else if (player2Blocking) {
+                player2Blocking = false;
+                player2Deciding = true;
+                player2.getDeck().drawCard();
+                refreshBoard();
+            }
         }
-        else if(player2Blocking){
-            player2Blocking = false;
-            player2Deciding = true;
-            player2.getDeck().drawCard();
-            refreshBoard();
-        }
-        else if(player2Deciding){
-            player2Deciding = false;
-            player1Blocking = true;
-            refreshBoard();
-        }
-        else if(player1Blocking){
-            player1Blocking = false;
-            player1Deciding = true;
-            player1.getDeck().drawCard();
-            refreshBoard();
+        while(player2Fighting) {
+            if (player2Deciding) {
+                player2Deciding = false;
+                player1Blocking = true;
+                refreshBoard();
+            } else if (player1Blocking) {
+                player1Blocking = false;
+                player1Deciding = true;
+                player1.getDeck().drawCard();
+                refreshBoard();
+            }
         }
     }
 
@@ -145,17 +147,16 @@ public class GameClient {
             board.getOpAsset4Button().setEnabled(false);
             board.getOpAsset5Button().setEnabled(false);
             board.getOpPass().setEnabled(false);
-
-            if (player1.getDeck().getCardsInHand().get(0).getCardTypeE() == CardTypeE.STRIKE){board.getUserCard1().setEnabled(true);} else{board.getUserCard1().setEnabled(false);}
-            if (player1.getDeck().getCardsInHand().get(1).getCardTypeE() == CardTypeE.STRIKE){board.getUserCard2().setEnabled(true);} else{board.getUserCard2().setEnabled(false);}
-            if (player1.getDeck().getCardsInHand().get(2).getCardTypeE() == CardTypeE.STRIKE){board.getUserCard3().setEnabled(true);} else{board.getUserCard3().setEnabled(false);}
-            if (player1.getDeck().getCardsInHand().get(3).getCardTypeE() == CardTypeE.STRIKE){board.getUserCard4().setEnabled(true);} else{board.getUserCard4().setEnabled(false);}
-            if (player1.getDeck().getCardsInHand().get(4).getCardTypeE() == CardTypeE.STRIKE){board.getUserCard5().setEnabled(true);} else{board.getUserCard5().setEnabled(false);}
-            if (player1.getDeck().getCardsInHand().get(5).getCardTypeE() == CardTypeE.STRIKE){board.getUserCard6().setEnabled(true);} else{board.getUserCard6().setEnabled(false);}
-            if (player1.getDeck().getCardsInHand().get(6).getCardTypeE() == CardTypeE.STRIKE){board.getUserCard7().setEnabled(true);} else{board.getUserCard7().setEnabled(false);}
-            if (player1.getDeck().getCardsInHand().get(7).getCardTypeE() == CardTypeE.STRIKE){board.getUserCard8().setEnabled(true);} else{board.getUserCard8().setEnabled(false);}
-            if (player1.getDeck().getCardsInHand().get(8).getCardTypeE() == CardTypeE.STRIKE){board.getUserCard9().setEnabled(true);} else{board.getUserCard9().setEnabled(false);}
-            if (player1.getDeck().getCardsInHand().get(9).getCardTypeE() == CardTypeE.STRIKE){board.getUserCard10().setEnabled(true);} else{board.getUserCard10().setEnabled(false);}
+            if (player1.getDeck().getCardsInHand().get(0).getCardTypeE() == CardTypeE.STRIKE || player1.getDeck().getCardsInHand().get(0).getCardTypeE() == CardTypeE.ASSET){board.getUserCard1().setEnabled(true);} else{board.getUserCard1().setEnabled(false);}
+            if (player1.getDeck().getCardsInHand().get(1).getCardTypeE() == CardTypeE.STRIKE || player1.getDeck().getCardsInHand().get(1).getCardTypeE() == CardTypeE.ASSET){board.getUserCard2().setEnabled(true);} else{board.getUserCard2().setEnabled(false);}
+            if (player1.getDeck().getCardsInHand().get(2).getCardTypeE() == CardTypeE.STRIKE || player1.getDeck().getCardsInHand().get(2).getCardTypeE() == CardTypeE.ASSET){board.getUserCard3().setEnabled(true);} else{board.getUserCard3().setEnabled(false);}
+            if (player1.getDeck().getCardsInHand().get(3).getCardTypeE() == CardTypeE.STRIKE || player1.getDeck().getCardsInHand().get(3).getCardTypeE() == CardTypeE.ASSET){board.getUserCard4().setEnabled(true);} else{board.getUserCard4().setEnabled(false);}
+            if (player1.getDeck().getCardsInHand().get(4).getCardTypeE() == CardTypeE.STRIKE || player1.getDeck().getCardsInHand().get(4).getCardTypeE() == CardTypeE.ASSET){board.getUserCard5().setEnabled(true);} else{board.getUserCard5().setEnabled(false);}
+            if (player1.getDeck().getCardsInHand().get(5).getCardTypeE() == CardTypeE.STRIKE || player1.getDeck().getCardsInHand().get(5).getCardTypeE() == CardTypeE.ASSET){board.getUserCard6().setEnabled(true);} else{board.getUserCard6().setEnabled(false);}
+            if (player1.getDeck().getCardsInHand().get(6).getCardTypeE() == CardTypeE.STRIKE || player1.getDeck().getCardsInHand().get(6).getCardTypeE() == CardTypeE.ASSET){board.getUserCard7().setEnabled(true);} else{board.getUserCard7().setEnabled(false);}
+            if (player1.getDeck().getCardsInHand().get(7).getCardTypeE() == CardTypeE.STRIKE || player1.getDeck().getCardsInHand().get(7).getCardTypeE() == CardTypeE.ASSET){board.getUserCard8().setEnabled(true);} else{board.getUserCard8().setEnabled(false);}
+            if (player1.getDeck().getCardsInHand().get(8).getCardTypeE() == CardTypeE.STRIKE || player1.getDeck().getCardsInHand().get(8).getCardTypeE() == CardTypeE.ASSET){board.getUserCard9().setEnabled(true);} else{board.getUserCard9().setEnabled(false);}
+            if (player1.getDeck().getCardsInHand().get(9).getCardTypeE() == CardTypeE.STRIKE || player1.getDeck().getCardsInHand().get(9).getCardTypeE() == CardTypeE.ASSET){board.getUserCard10().setEnabled(true);} else{board.getUserCard10().setEnabled(false);}
 
 
         }
@@ -179,6 +180,16 @@ public class GameClient {
             board.getUserAsset4().setEnabled(false);
             board.getUserAsset5().setEnabled(false);
             board.getPass().setEnabled(false);
+            if (player2.getDeck().getCardsInHand().get(0).getCardTypeE() == CardTypeE.STRIKE || player2.getDeck().getCardsInHand().get(0).getCardTypeE() == CardTypeE.ASSET){board.getOpCard1().setEnabled(true);} else{board.getOpCard1().setEnabled(false);}
+            if (player2.getDeck().getCardsInHand().get(1).getCardTypeE() == CardTypeE.STRIKE || player2.getDeck().getCardsInHand().get(1).getCardTypeE() == CardTypeE.ASSET){board.getOpCard2().setEnabled(true);} else{board.getOpCard2().setEnabled(false);}
+            if (player2.getDeck().getCardsInHand().get(2).getCardTypeE() == CardTypeE.STRIKE || player2.getDeck().getCardsInHand().get(2).getCardTypeE() == CardTypeE.ASSET){board.getOpCard3().setEnabled(true);} else{board.getOpCard3().setEnabled(false);}
+            if (player2.getDeck().getCardsInHand().get(3).getCardTypeE() == CardTypeE.STRIKE || player2.getDeck().getCardsInHand().get(3).getCardTypeE() == CardTypeE.ASSET){board.getOpCard4().setEnabled(true);} else{board.getOpCard4().setEnabled(false);}
+            if (player2.getDeck().getCardsInHand().get(4).getCardTypeE() == CardTypeE.STRIKE || player2.getDeck().getCardsInHand().get(4).getCardTypeE() == CardTypeE.ASSET){board.getOpCard5().setEnabled(true);} else{board.getOpCard5().setEnabled(false);}
+            if (player2.getDeck().getCardsInHand().get(5).getCardTypeE() == CardTypeE.STRIKE || player2.getDeck().getCardsInHand().get(5).getCardTypeE() == CardTypeE.ASSET){board.getOpCard6().setEnabled(true);} else{board.getOpCard6().setEnabled(false);}
+            if (player2.getDeck().getCardsInHand().get(6).getCardTypeE() == CardTypeE.STRIKE || player2.getDeck().getCardsInHand().get(6).getCardTypeE() == CardTypeE.ASSET){board.getOpCard7().setEnabled(true);} else{board.getOpCard7().setEnabled(false);}
+            if (player2.getDeck().getCardsInHand().get(7).getCardTypeE() == CardTypeE.STRIKE || player2.getDeck().getCardsInHand().get(7).getCardTypeE() == CardTypeE.ASSET){board.getOpCard8().setEnabled(true);} else{board.getOpCard8().setEnabled(false);}
+            if (player2.getDeck().getCardsInHand().get(8).getCardTypeE() == CardTypeE.STRIKE || player2.getDeck().getCardsInHand().get(8).getCardTypeE() == CardTypeE.ASSET){board.getOpCard9().setEnabled(true);} else{board.getOpCard9().setEnabled(false);}
+            if (player2.getDeck().getCardsInHand().get(9).getCardTypeE() == CardTypeE.STRIKE || player2.getDeck().getCardsInHand().get(9).getCardTypeE() == CardTypeE.ASSET){board.getOpCard10().setEnabled(true);} else{board.getOpCard10().setEnabled(false);}
         }
         if (player1Blocking){
 
