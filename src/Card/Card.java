@@ -12,13 +12,14 @@ public class Card
     private String cardClass;
     private Image cardImage;
     private CardTypeE cardTypeE;
+    private int cardDamage;
 
-    public Card(String name, String cardClass, CardTypeE cardTypeE, Image cardImage){
+    public Card(String name, String cardClass, CardTypeE cardTypeE, Image cardImage, int damage){
         this.cardName = name;
         this.cardClass = cardClass;
         this.cardImage = cardImage;
         this.cardTypeE = cardTypeE;
-
+        this.cardDamage = damage;
     }
 
     void setName(String x){
@@ -41,4 +42,6 @@ public class Card
     public void setCardTypeE(CardTypeE cardTypeE) {
         this.cardTypeE = cardTypeE;
     }
+    public int getCardDamage() {return cardDamage;}
+    public void setCardDamage(int cardDamage) {this.cardDamage = cardDamage;}
 }

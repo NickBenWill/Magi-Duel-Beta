@@ -1,11 +1,9 @@
 package Board;
 import Player.Player;
-import Card.Card;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.awt.image.BufferedImage;
-import Card.Deck;
-import Card.CardTypeE;
+import Card.*;
 
 // the mega-ton import for every card in CardLibrary. Luna help us all
 import CardLibrary.*;
@@ -208,14 +206,15 @@ public class GameClient {
                 catch(IOException ie){
                     ie.printStackTrace();
                 }
-                Card StormSurge = new StormSurge("Storm Surge", "Pirateboi", CardTypeE.COUNTER, i);
+                Card StormSurge = new StormSurge("Storm Surge", "Swordsman", CardTypeE.COUNTER, i);
+                CounterI CounterInterface = StormSurge;
                 try {
                     i = ImageIO.read(GameClient.class.getResourceAsStream("/Resources/2D.png"));
                 }
                 catch(IOException ie){
                     ie.printStackTrace();
                 }
-                Card OverheadStrike = new OverheadStrike("Overhead Strike", "Pirateboi", CardTypeE.STRIKE, i, 8);
+                Card OverheadStrike = new OverheadStrike("Overhead Strike", "Swordsman", CardTypeE.STRIKE, i, 8);
                 temp.add(StormSurge);
                 for (int k = 1; k < 39; k++){
                     temp.add(OverheadStrike);

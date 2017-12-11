@@ -9,9 +9,11 @@ import java.util.ArrayList;
 import Card.*;
 
 import Card.CardTypeE;
+import CardLibrary.FlowingJabs;
 import CardLibrary.OverheadStrike;
 import CardLibrary.WickedFandango;
 import Player.Player;
+import com.sun.media.sound.WaveFloatFileReader;
 import sun.misc.Launcher;
 
 /**
@@ -100,21 +102,15 @@ public class Board {
             public void actionPerformed(ActionEvent e) {
                 if (gameClient.getPlayer1Deciding()){
                     if (GameClient.player1.getDeck().getCardsInHand().get(0).getCardTypeE() == CardTypeE.STRIKE){
-                        /*Method[] methods = StrikeI.class.getDeclaredMethods();
-                        for (Method method : methods) {
-                            try {
-                                method.invoke(GameClient.player1.getDeck().getCardsInHand().get(0));
-                            }catch (IllegalAccessException ie){
-                                ie.printStackTrace();
-                            }
-                            catch (InvocationTargetException ite){
-                                ite.printStackTrace();
-                            }
-                        }*/
+                        Strike strike = new Strike("meme", "meme", CardTypeE.STRIKE, null, 9);
+                        strike.callAll(GameClient.player1.getDeck().getCardsInHand().get(0), GameClient.player1, GameClient.player2);
+
+
                     }
-                    else if(GameClient.player1.getDeck().getCardsInHand().get(0).getCardTypeE() == CardTypeE.ASSET)
-                    GameClient.player1.getDeck().getAssetsInPlay().add(GameClient.player1.getDeck().getCardsInHand().get(0));
-                    GameClient.player1.getDeck().getCardsInHand().remove(0);
+                    else if(GameClient.player1.getDeck().getCardsInHand().get(0).getCardTypeE() == CardTypeE.ASSET) {
+                        GameClient.player1.getDeck().getAssetsInPlay().add(GameClient.player1.getDeck().getCardsInHand().get(0));
+                        GameClient.player1.getDeck().getCardsInHand().remove(0);
+                    }
                 }
             }
         });

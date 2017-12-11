@@ -15,7 +15,7 @@ public class OverheadStrike extends Strike implements StrikeI{
     private String name;
 
     public OverheadStrike(String name, String cardClass, CardTypeE cardTypeE, Image cardImage, int damage) {
-        super(name, cardClass, cardTypeE, cardImage);
+        super(name, cardClass, cardTypeE, cardImage, damage);
         this.name = "Overhead Strike";
         this.damage =damage;
         damage = 8;
@@ -50,6 +50,8 @@ public class OverheadStrike extends Strike implements StrikeI{
     public void setBuff(Player playerBeingBuffed) {
 
     }
+
+
 
     public int getDamage() {
         return damage;
