@@ -1,14 +1,13 @@
 package CardLibrary;
 import Card.CardTypeE;
 import Card.Counter;
-import Card.CounterI;
 import Player.Player;
 
 import java.awt.*;
 /**
  * Created by 18nbenjung on 10/6/2017.
  */
-public class StormSurge extends Counter implements CounterI{
+public class StormSurge extends Counter{
     private int limit;
     public StormSurge(String name, String cardClass, CardTypeE cardTypeE, Image cardImage) {
         super(name, cardClass, cardTypeE, cardImage);
@@ -16,17 +15,17 @@ public class StormSurge extends Counter implements CounterI{
         limit = 4;
     }
 
-    @Override
+
     public void isDamageCountered(Player playerReceivingDamage, int counterLimit, int incomingDamage) {
 
     }
 
-    @Override
+
     public void revengeDamage(Player playerReceivingDamage, int damage) {
 
     }
 
-    @Override
+
     public void isUsable(Player playerReceivingDamage) {
 
     }

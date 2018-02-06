@@ -27,7 +27,7 @@ public class GameClient {
     public static boolean player2Fighting = false;
 
     public static void main(String args[]){
-        board.testCallAll();
+
         boolean isWon = false;
         int currentTurnCount = 1;
         gc.assignDecks(player1, 1);
@@ -207,7 +207,7 @@ public class GameClient {
                     ie.printStackTrace();
                 }
                 Card StormSurge = new StormSurge("Storm Surge", "Swordsman", CardTypeE.COUNTER, i);
-                CounterI CounterInterface = StormSurge;
+
                 try {
                     i = ImageIO.read(GameClient.class.getResourceAsStream("/Resources/2D.png"));
                 }

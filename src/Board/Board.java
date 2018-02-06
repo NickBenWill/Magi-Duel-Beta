@@ -71,21 +71,6 @@ public class Board {
 
     private GameClient gameClient;
 
-    static void testCallAll(){
-        Method[] methods = StrikeI.class.getDeclaredMethods();
-        for (Method method : methods) {
-            try {
-                Card OverheadStrike = new OverheadStrike("Overhead Strike", "Pirateboi", CardTypeE.STRIKE, null, 8);
-                method.invoke(OverheadStrike);
-            }catch (IllegalAccessException ie){
-                ie.printStackTrace();
-            }
-            catch (InvocationTargetException ite){
-                ite.printStackTrace();
-            }
-        }
-    }
-
     public Board(GameClient gameClient){
         this.gameClient = gameClient;
         this.mainFrame.setContentPane(this.getMainPanel());
@@ -94,18 +79,12 @@ public class Board {
         this.mainFrame.setResizable(true);
         this.mainFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
-
-
-
         userCard1.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 if (gameClient.getPlayer1Deciding()){
                     if (GameClient.player1.getDeck().getCardsInHand().get(0).getCardTypeE() == CardTypeE.STRIKE){
-                        Strike strike = new Strike("meme", "meme", CardTypeE.STRIKE, null, 9);
-                        strike.callAll(GameClient.player1.getDeck().getCardsInHand().get(0), GameClient.player1, GameClient.player2);
-
-
+                        GameClient.player1.getDeck().getCardsInHand().get(0).callAll(GameClient.player1, GameClient.player2);
                     }
                     else if(GameClient.player1.getDeck().getCardsInHand().get(0).getCardTypeE() == CardTypeE.ASSET) {
                         GameClient.player1.getDeck().getAssetsInPlay().add(GameClient.player1.getDeck().getCardsInHand().get(0));
