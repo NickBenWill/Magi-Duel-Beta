@@ -33,7 +33,6 @@ public class WickedFandango extends Strike {
     public void ifCountered(Player playerCountered, Player playerCountering){
         damage = 5;
         this.damageDealt(playerCountered, damage, playerCountering);
-
     }
 
     public int getDamage() {

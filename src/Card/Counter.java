@@ -1,5 +1,7 @@
 package Card;
 
+import Player.Player;
+
 import java.awt.*;
 
 /**
@@ -10,4 +12,6 @@ public class Counter extends Card {
     public Counter(String name, String cardClass, CardTypeE cardTypeE, Image cardImage) {
         super(name, cardClass, cardTypeE, cardImage);
     }
+
+    public void callAll(Player user, Player opponent){}
 }

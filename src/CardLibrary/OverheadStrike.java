@@ -23,6 +23,8 @@ public class OverheadStrike extends Strike{
 
     public void damageDealt(Player playerReceivingDamage, int damage, Player playerDealingDamage) {
         playerReceivingDamage.setPlayerHealth(playerReceivingDamage.getPlayerHealth() -damage - playerDealingDamage.getDamageBuff());
+        System.out.println("End my suffering :)");
+
     }
 
     public int getDamage() {
@@ -34,6 +36,6 @@ public class OverheadStrike extends Strike{
     }
 
     public void callAll(Player user, Player Opponent){
-
+        damageDealt(Opponent, this.damage, user);
     }
 }

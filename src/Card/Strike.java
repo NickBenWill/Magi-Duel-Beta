@@ -13,9 +13,6 @@ public class Strike extends Card{
         super(name, cardClass, cardTypeE, cardImage);
     }
 
-    public void callAll(Player user, Player opponent){
-
-
-    }
+    public void callAll(Player user, Player opponent){}
 
 }
