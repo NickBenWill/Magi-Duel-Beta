@@ -25,6 +25,10 @@ public class GameClient {
     public static boolean player1Blocking = false;
     public static boolean player1Fighting = true;
     public static boolean player2Fighting = false;
+    public static int StrikeLimit = 1;
+    public static int StrikesPlayed = 0;
+    public static int player1AssetsInPlay = 1;
+    public static int player2AssetsInPlay = 1;
 
     public static void main(String args[]){
 
@@ -178,7 +182,14 @@ public class GameClient {
             board.getUserAsset4().setEnabled(false);
             board.getUserAsset5().setEnabled(false);
             board.getPass().setEnabled(false);
-            if (player2.getDeck().getCardsInHand().get(0).getCardTypeE() == CardTypeE.STRIKE || player2.getDeck().getCardsInHand().get(0).getCardTypeE() == CardTypeE.ASSET){board.getOpCard1().setEnabled(true);} else{board.getOpCard1().setEnabled(false);}
+            if (((player2.getDeck().getCardsInHand().get(0).getCardTypeE() == CardTypeE.ASSET) && (GameClient.player2AssetsInPlay < 5))) {
+                board.getOpCard1().setEnabled(true);
+            } else if ((player2.getDeck().getCardsInHand().get(0).getCardTypeE() == CardTypeE.STRIKE) && (GameClient.StrikesPlayed < GameClient.StrikeLimit)) {
+                board.getOpCard1().setEnabled(true);
+            } else {
+                board.getOpCard1().setEnabled(false);
+            }
+
             if (player2.getDeck().getCardsInHand().get(1).getCardTypeE() == CardTypeE.STRIKE || player2.getDeck().getCardsInHand().get(1).getCardTypeE() == CardTypeE.ASSET){board.getOpCard2().setEnabled(true);} else{board.getOpCard2().setEnabled(false);}
             if (player2.getDeck().getCardsInHand().get(2).getCardTypeE() == CardTypeE.STRIKE || player2.getDeck().getCardsInHand().get(2).getCardTypeE() == CardTypeE.ASSET){board.getOpCard3().setEnabled(true);} else{board.getOpCard3().setEnabled(false);}
             if (player2.getDeck().getCardsInHand().get(3).getCardTypeE() == CardTypeE.STRIKE || player2.getDeck().getCardsInHand().get(3).getCardTypeE() == CardTypeE.ASSET){board.getOpCard4().setEnabled(true);} else{board.getOpCard4().setEnabled(false);}

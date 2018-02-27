@@ -82,15 +82,7 @@ public class Board {
         userCard1.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                if (gameClient.getPlayer1Deciding()){
-                    if (GameClient.player1.getDeck().getCardsInHand().get(0).getCardTypeE() == CardTypeE.STRIKE){
-                        GameClient.player1.getDeck().getCardsInHand().get(0).callAll(GameClient.player1, GameClient.player2);
-                    }
-                    else if(GameClient.player1.getDeck().getCardsInHand().get(0).getCardTypeE() == CardTypeE.ASSET) {
-                        GameClient.player1.getDeck().getAssetsInPlay().add(GameClient.player1.getDeck().getCardsInHand().get(0));
-                        GameClient.player1.getDeck().getCardsInHand().remove(0);
-                    }
-                }
+
             }
         });
         userCard2.addActionListener(new ActionListener() {
@@ -147,6 +139,23 @@ public class Board {
 
             }
         });
+
+    }
+
+    private void processAction(int CardSlot){
+        if (gameClient.getPlayer1Deciding()){
+            if (GameClient.player1.getDeck().getCardsInHand().get(CardSlot).getCardTypeE() == CardTypeE.STRIKE && GameClient.StrikesPlayed <= GameClient.StrikeLimit){
+                GameClient.player1.getDeck().getCardsInHand().get(CardSlot).callAll(GameClient.player1, GameClient.player2);
+                GameClient.player1.getDeck().getCardsInHand().remove(CardSlot);
+                GameClient.StrikesPlayed++;
+            }
+            else if(GameClient.player1.getDeck().getCardsInHand().get(CardSlot).getCardTypeE() == CardTypeE.ASSET && GameClient.player1AssetsInPlay < 5) {
+                GameClient.player1.getDeck().getAssetsInPlay().add(GameClient.player1.getDeck().getCardsInHand().get(CardSlot));
+                GameClient.player1.getDeck().getCardsInHand().remove(CardSlot);
+                GameClient.player1AssetsInPlay++;
+            }
+        }
+        gameClient.refreshBoard();
 
     }
 
