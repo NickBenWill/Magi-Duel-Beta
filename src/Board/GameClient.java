@@ -9,6 +9,7 @@ import Card.*;
 import CardLibrary.*;
 
 import javax.imageio.ImageIO;
+import javax.swing.*;
 
 /**
  * Created by 18nbenjung on 9/26/2017.
@@ -29,6 +30,10 @@ public class GameClient {
     public static int StrikesPlayed = 0;
     public static int player1AssetsInPlay = 1;
     public static int player2AssetsInPlay = 1;
+    public static ArrayList<JButton> userCards = new ArrayList<>();
+    public static ArrayList<JButton> opCards = new ArrayList<>();
+    public static ArrayList<JButton> userAssets = new ArrayList<>();
+    public static ArrayList<JButton> opAssets = new ArrayList<>();
 
     public static void main(String args[]){
 
@@ -85,31 +90,59 @@ public class GameClient {
     }
 
     public void refreshBoard(){
+        // thick arrays bro
+        userCards.clear();
+        opCards.clear();
+        opAssets.clear();
+        userAssets.clear();
+        userCards.add(board.getUserCard1());
+        userCards.add(board.getUserCard2());
+        userCards.add(board.getUserCard3());
+        userCards.add(board.getUserCard4());
+        userCards.add(board.getUserCard5());
+        userCards.add(board.getUserCard6());
+        userCards.add(board.getUserCard7());
+        userCards.add(board.getUserCard8());
+        userCards.add(board.getUserCard9());
+        userCards.add(board.getUserCard10());
+        opCards.add(board.getOpCard1());
+        opCards.add(board.getOpCard2());
+        opCards.add(board.getOpCard3());
+        opCards.add(board.getOpCard4());
+        opCards.add(board.getOpCard5());
+        opCards.add(board.getOpCard6());
+        opCards.add(board.getOpCard7());
+        opCards.add(board.getOpCard8());
+        opCards.add(board.getOpCard9());
+        opCards.add(board.getOpCard10());
+        userAssets.add(board.getUserAsset1());
+        userAssets.add(board.getUserAsset2());
+        userAssets.add(board.getUserAsset3());
+        userAssets.add(board.getUserAsset4());
+        userAssets.add(board.getUserAsset5());
+        opAssets.add(board.getOpAsset1Button());
+        opAssets.add(board.getOpAsset2Button());
+        opAssets.add(board.getOpAsset3Button());
+        opAssets.add(board.getOpAsset4Button());
+        opAssets.add(board.getOpAsset5Button());
+
+
         // refresh health labels
         board.getUserHealth().setText("Your Health: " + player1.getPlayerHealth());
         board.getOpHealth().setText("Opponent's Health: " + player2.getPlayerHealth());
+
         // refresh names of Player 1's cards
-        board.getUserCard1().setText(player1.getDeck().getCardsInHand().get(0).getName());
-        board.getUserCard2().setText(player1.getDeck().getCardsInHand().get(1).getName());
-        board.getUserCard3().setText(player1.getDeck().getCardsInHand().get(2).getName());
-        board.getUserCard4().setText(player1.getDeck().getCardsInHand().get(3).getName());
-        board.getUserCard5().setText(player1.getDeck().getCardsInHand().get(4).getName());
-        board.getUserCard6().setText(player1.getDeck().getCardsInHand().get(5).getName());
-        board.getUserCard7().setText(player1.getDeck().getCardsInHand().get(6).getName());
-        board.getUserCard8().setText(player1.getDeck().getCardsInHand().get(7).getName());
-        board.getUserCard9().setText(player1.getDeck().getCardsInHand().get(8).getName());
-        board.getUserCard10().setText(player1.getDeck().getCardsInHand().get(9).getName());
+        for (int i = 0; i < player1.getDeck().getCardsInHand().size(); i++){
+            userCards.get(i).setText(player1.getDeck().getCardsInHand().get(i).getName());
+        }
+
+
+
         // refresh names of Player 2's cards
-        board.getOpCard1().setText(player2.getDeck().getCardsInHand().get(0).getName());
-        board.getOpCard2().setText(player2.getDeck().getCardsInHand().get(1).getName());
-        board.getOpCard3().setText(player2.getDeck().getCardsInHand().get(2).getName());
-        board.getOpCard4().setText(player2.getDeck().getCardsInHand().get(3).getName());
-        board.getOpCard5().setText(player2.getDeck().getCardsInHand().get(4).getName());
-        board.getOpCard6().setText(player2.getDeck().getCardsInHand().get(5).getName());
-        board.getOpCard7().setText(player2.getDeck().getCardsInHand().get(6).getName());
-        board.getOpCard8().setText(player2.getDeck().getCardsInHand().get(7).getName());
-        board.getOpCard9().setText(player2.getDeck().getCardsInHand().get(8).getName());
-        board.getOpCard10().setText(player2.getDeck().getCardsInHand().get(9).getName());
+        for (int i = 0; i < player2.getDeck().getCardsInHand().size(); i++){
+            opCards.get(i).setText(player2.getDeck().getCardsInHand().get(i).getName());
+        }
+
         // refresh imageIcons for Player 1's cards
         /*board.getUserCard1().setIcon(new ImageIcon(player1.getDeck().getCardsInHand().get(0).getCardImage()));
         board.getUserCard2().setIcon(new ImageIcon(player1.getDeck().getCardsInHand().get(1).getCardImage()));
@@ -133,33 +166,19 @@ public class GameClient {
         board.getOpCard9().setIcon(new ImageIcon(player2.getDeck().getCardsInHand().get(8).getCardImage()));
         board.getOpCard10().setIcon(new ImageIcon(player2.getDeck().getCardsInHand().get(9).getCardImage())); */
         if (player1Deciding){
-            board.getOpCard1().setEnabled(false);
-            board.getOpCard2().setEnabled(false);
-            board.getOpCard3().setEnabled(false);
-            board.getOpCard4().setEnabled(false);
-            board.getOpCard5().setEnabled(false);
-            board.getOpCard6().setEnabled(false);
-            board.getOpCard7().setEnabled(false);
-            board.getOpCard8().setEnabled(false);
-            board.getOpCard9().setEnabled(false);
-            board.getOpCard10().setEnabled(false);
-            board.getOpAsset1Button().setEnabled(false);
-            board.getOpAsset2Button().setEnabled(false);
-            board.getOpAsset3Button().setEnabled(false);
-            board.getOpAsset4Button().setEnabled(false);
-            board.getOpAsset5Button().setEnabled(false);
+            for (int i = 0; i < opCards.size(); i++){opCards.get(i).setEnabled(false);}
+            for (int i = 0; i <opAssets.size(); i++){opAssets.get(i).setEnabled(false);}
             board.getOpPass().setEnabled(false);
-            if (player1.getDeck().getCardsInHand().get(0).getCardTypeE() == CardTypeE.STRIKE || player1.getDeck().getCardsInHand().get(0).getCardTypeE() == CardTypeE.ASSET){board.getUserCard1().setEnabled(true);} else{board.getUserCard1().setEnabled(false);}
-            if (player1.getDeck().getCardsInHand().get(1).getCardTypeE() == CardTypeE.STRIKE || player1.getDeck().getCardsInHand().get(1).getCardTypeE() == CardTypeE.ASSET){board.getUserCard2().setEnabled(true);} else{board.getUserCard2().setEnabled(false);}
-            if (player1.getDeck().getCardsInHand().get(2).getCardTypeE() == CardTypeE.STRIKE || player1.getDeck().getCardsInHand().get(2).getCardTypeE() == CardTypeE.ASSET){board.getUserCard3().setEnabled(true);} else{board.getUserCard3().setEnabled(false);}
-            if (player1.getDeck().getCardsInHand().get(3).getCardTypeE() == CardTypeE.STRIKE || player1.getDeck().getCardsInHand().get(3).getCardTypeE() == CardTypeE.ASSET){board.getUserCard4().setEnabled(true);} else{board.getUserCard4().setEnabled(false);}
-            if (player1.getDeck().getCardsInHand().get(4).getCardTypeE() == CardTypeE.STRIKE || player1.getDeck().getCardsInHand().get(4).getCardTypeE() == CardTypeE.ASSET){board.getUserCard5().setEnabled(true);} else{board.getUserCard5().setEnabled(false);}
-            if (player1.getDeck().getCardsInHand().get(5).getCardTypeE() == CardTypeE.STRIKE || player1.getDeck().getCardsInHand().get(5).getCardTypeE() == CardTypeE.ASSET){board.getUserCard6().setEnabled(true);} else{board.getUserCard6().setEnabled(false);}
-            if (player1.getDeck().getCardsInHand().get(6).getCardTypeE() == CardTypeE.STRIKE || player1.getDeck().getCardsInHand().get(6).getCardTypeE() == CardTypeE.ASSET){board.getUserCard7().setEnabled(true);} else{board.getUserCard7().setEnabled(false);}
-            if (player1.getDeck().getCardsInHand().get(7).getCardTypeE() == CardTypeE.STRIKE || player1.getDeck().getCardsInHand().get(7).getCardTypeE() == CardTypeE.ASSET){board.getUserCard8().setEnabled(true);} else{board.getUserCard8().setEnabled(false);}
-            if (player1.getDeck().getCardsInHand().get(8).getCardTypeE() == CardTypeE.STRIKE || player1.getDeck().getCardsInHand().get(8).getCardTypeE() == CardTypeE.ASSET){board.getUserCard9().setEnabled(true);} else{board.getUserCard9().setEnabled(false);}
-            if (player1.getDeck().getCardsInHand().get(9).getCardTypeE() == CardTypeE.STRIKE || player1.getDeck().getCardsInHand().get(9).getCardTypeE() == CardTypeE.ASSET){board.getUserCard10().setEnabled(true);} else{board.getUserCard10().setEnabled(false);}
+            for (int i = 0; i < player1.getDeck().getCardsInHand().size(); i++){
+                if (((player1.getDeck().getCardsInHand().get(0).getCardTypeE() == CardTypeE.ASSET) && (GameClient.player1AssetsInPlay < 5))) {
+                    userCards.get(i).setEnabled(true);
+                } else if ((player1.getDeck().getCardsInHand().get(0).getCardTypeE() == CardTypeE.STRIKE) && (GameClient.StrikesPlayed < GameClient.StrikeLimit)) {
+                    userCards.get(i).setEnabled(true);
+                } else {
+                    userCards.get(i).setEnabled(true);
+                }
 
+            }
 
         }
         if (player2Blocking){

@@ -2,19 +2,8 @@ package Board;
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.lang.reflect.InvocationTargetException;
-import java.lang.reflect.Method;
-import java.util.ArrayList;
-
-import Card.*;
 
 import Card.CardTypeE;
-import CardLibrary.FlowingJabs;
-import CardLibrary.OverheadStrike;
-import CardLibrary.WickedFandango;
-import Player.Player;
-import com.sun.media.sound.WaveFloatFileReader;
-import sun.misc.Launcher;
 
 /**
  * Created by 18rpaolucci on 9/25/2017.
@@ -82,7 +71,7 @@ public class Board {
         userCard1.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
+            processAction(0);
             }
         });
         userCard2.addActionListener(new ActionListener() {
