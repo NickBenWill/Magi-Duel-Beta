@@ -133,7 +133,7 @@ public class Board {
 
     private void processAction(int CardSlot){
         if (gameClient.getPlayer1Deciding()){
-            if (GameClient.player1.getDeck().getCardsInHand().get(CardSlot).getCardTypeE() == CardTypeE.STRIKE && GameClient.StrikesPlayed <= GameClient.StrikeLimit){
+            if (GameClient.player1.getDeck().getCardsInHand().get(CardSlot).getCardTypeE() == CardTypeE.STRIKE && GameClient.StrikesPlayed < GameClient.StrikeLimit){
                 GameClient.player1.getDeck().getCardsInHand().get(CardSlot).callAll(GameClient.player1, GameClient.player2);
                 GameClient.player1.getDeck().getCardsInHand().remove(CardSlot);
                 GameClient.StrikesPlayed++;
