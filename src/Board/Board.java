@@ -71,71 +71,73 @@ public class Board {
         userCard1.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-            processAction(0);
+                processPlayAction(0);
             }
         });
         userCard2.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
+                processPlayAction(1);
             }
         });
         userCard3.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
+                processPlayAction(2);
             }
         });
         userCard4.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
+                processPlayAction(3);
             }
         });
         userCard5.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
+                processPlayAction(4);
             }
         });
         userCard6.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
+                processPlayAction(5);
             }
         });
         userCard7.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
+                processPlayAction(6);
             }
         });
         userCard8.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
+                processPlayAction(7);
             }
         });
         userCard9.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
+                processPlayAction(8);
             }
         });
         userCard10.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
+                processPlayAction(9);
             }
         });
 
     }
 
-    private void processAction(int CardSlot){
+    private void processPlayAction(int CardSlot){
         if (gameClient.getPlayer1Deciding()){
             if (GameClient.player1.getDeck().getCardsInHand().get(CardSlot).getCardTypeE() == CardTypeE.STRIKE && GameClient.StrikesPlayed < GameClient.StrikeLimit){
                 GameClient.player1.getDeck().getCardsInHand().get(CardSlot).callAll(GameClient.player1, GameClient.player2);
+                GameClient.player1.getDeck().getDiscardPile().add(GameClient.player1.getDeck().getCardsInHand().get(CardSlot));
                 GameClient.player1.getDeck().getCardsInHand().remove(CardSlot);
+
                 GameClient.StrikesPlayed++;
             }
             else if(GameClient.player1.getDeck().getCardsInHand().get(CardSlot).getCardTypeE() == CardTypeE.ASSET && GameClient.player1AssetsInPlay < 5) {
