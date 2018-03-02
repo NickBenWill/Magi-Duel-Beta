@@ -1,5 +1,7 @@
 package Board;
 import Player.Player;
+
+import java.awt.*;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.awt.image.BufferedImage;
@@ -128,48 +130,32 @@ public class GameClient {
         board.getUserHealth().setText("Your Health: " + player1.getPlayerHealth());
         board.getOpHealth().setText("Opponent's Health: " + player2.getPlayerHealth());
 
-        // refresh names of Player 1's cards
+        // refresh names/images of Player 1's cards and clears empty buttons
         for (int i = 0; i < player1.getDeck().getCardsInHand().size(); i++){
             userCards.get(i).setText(player1.getDeck().getCardsInHand().get(i).getName());
+            userCards.get(i).setIcon(new ImageIcon(player1.getDeck().getCardsInHand().get(i).getCardImage().getScaledInstance(74, 113, Image.SCALE_DEFAULT)));
         }
 
         for (int i = 9; i > (9 - (userCards.size() - player1.getDeck().getCardsInHand().size())); i--){
             userCards.get(i).setText("  ");
+            userCards.get(i).setIcon(null);
             userCards.get(i).setEnabled(false);
         }
 
-        // refresh names of Player 2's cards
+        // refresh names/images of Player 2's cards and clears empty buttons
         for (int i = 0; i < player2.getDeck().getCardsInHand().size(); i++){
             opCards.get(i).setText(player2.getDeck().getCardsInHand().get(i).getName());
+            opCards.get(i).setIcon(new ImageIcon(player2.getDeck().getCardsInHand().get(i).getCardImage().getScaledInstance(74, 113, Image.SCALE_DEFAULT)));
         }
 
         for (int i = 9; i > (9 - (opCards.size() - player2.getDeck().getCardsInHand().size())); i--){
             opCards.get(i).setText("  ");
+            opCards.get(i).setIcon(null);
             opCards.get(i).setEnabled(false);
         }
 
-        // refresh imageIcons for Player 1's cards
-        /*board.getUserCard1().setIcon(new ImageIcon(player1.getDeck().getCardsInHand().get(0).getCardImage()));
-        board.getUserCard2().setIcon(new ImageIcon(player1.getDeck().getCardsInHand().get(1).getCardImage()));
-        board.getUserCard3().setIcon(new ImageIcon(player1.getDeck().getCardsInHand().get(2).getCardImage()));
-        board.getUserCard4().setIcon(new ImageIcon(player1.getDeck().getCardsInHand().get(3).getCardImage()));
-        board.getUserCard5().setIcon(new ImageIcon(player1.getDeck().getCardsInHand().get(4).getCardImage()));
-        board.getUserCard6().setIcon(new ImageIcon(player1.getDeck().getCardsInHand().get(5).getCardImage()));
-        board.getUserCard7().setIcon(new ImageIcon(player1.getDeck().getCardsInHand().get(6).getCardImage()));
-        board.getUserCard8().setIcon(new ImageIcon(player1.getDeck().getCardsInHand().get(7).getCardImage()));
-        board.getUserCard9().setIcon(new ImageIcon(player1.getDeck().getCardsInHand().get(8).getCardImage()));
-        board.getUserCard10().setIcon(new ImageIcon(player1.getDeck().getCardsInHand().get(9).getCardImage()));
-        // refresh imageIcons for Player 2's cards
-        board.getOpCard1().setIcon(new ImageIcon(player2.getDeck().getCardsInHand().get(0).getCardImage()));
-        board.getOpCard2().setIcon(new ImageIcon(player2.getDeck().getCardsInHand().get(1).getCardImage()));
-        board.getOpCard3().setIcon(new ImageIcon(player2.getDeck().getCardsInHand().get(2).getCardImage()));
-        board.getOpCard4().setIcon(new ImageIcon(player2.getDeck().getCardsInHand().get(3).getCardImage()));
-        board.getOpCard5().setIcon(new ImageIcon(player2.getDeck().getCardsInHand().get(4).getCardImage()));
-        board.getOpCard6().setIcon(new ImageIcon(player2.getDeck().getCardsInHand().get(5).getCardImage()));
-        board.getOpCard7().setIcon(new ImageIcon(player2.getDeck().getCardsInHand().get(6).getCardImage()));
-        board.getOpCard8().setIcon(new ImageIcon(player2.getDeck().getCardsInHand().get(7).getCardImage()));
-        board.getOpCard9().setIcon(new ImageIcon(player2.getDeck().getCardsInHand().get(8).getCardImage()));
-        board.getOpCard10().setIcon(new ImageIcon(player2.getDeck().getCardsInHand().get(9).getCardImage())); */
+
+        // Turn logic let's go
         if (player1Deciding){
             for (int i = 0; i < opCards.size(); i++){opCards.get(i).setEnabled(false);}
             for (int i = 0; i <opAssets.size(); i++){opAssets.get(i).setEnabled(false);}
@@ -215,7 +201,7 @@ public class GameClient {
                 BufferedImage i=null;
                 ArrayList<Card> temp = new ArrayList<Card>();
                 try {
-                    i = ImageIO.read(GameClient.class.getResourceAsStream("/Resources/2C.png"));
+                    i = ImageIO.read(GameClient.class.getResourceAsStream("/Resources/art_storm_surge.jpg"));
                 }
                 catch(IOException ie){
                     ie.printStackTrace();
@@ -223,7 +209,7 @@ public class GameClient {
                 Card StormSurge = new StormSurge("Storm Surge", "Swordsman", CardTypeE.COUNTER, i);
 
                 try {
-                    i = ImageIO.read(GameClient.class.getResourceAsStream("/Resources/2D.png"));
+                    i = ImageIO.read(GameClient.class.getResourceAsStream("/Resources/art_overhead_strike.jpg"));
                 }
                 catch(IOException ie){
                     ie.printStackTrace();
