@@ -132,19 +132,19 @@ public class GameClient {
 
         // refresh names/images of Player 1's cards and clears empty buttons
         for (int i = 0; i < player1.getDeck().getCardsInHand().size(); i++){
-            userCards.get(i).setText(player1.getDeck().getCardsInHand().get(i).getName());
+            userCards.get(i).setText(/*player1.getDeck().getCardsInHand().get(i).getName()*/ null);
             userCards.get(i).setIcon(new ImageIcon(player1.getDeck().getCardsInHand().get(i).getCardImage().getScaledInstance(74, 113, Image.SCALE_DEFAULT)));
         }
 
         for (int i = 9; i > (9 - (userCards.size() - player1.getDeck().getCardsInHand().size())); i--){
-            userCards.get(i).setText("  ");
+            //userCards.get(i).setText("  ");
             userCards.get(i).setIcon(null);
             userCards.get(i).setEnabled(false);
         }
 
         // refresh names/images of Player 2's cards and clears empty buttons
         for (int i = 0; i < player2.getDeck().getCardsInHand().size(); i++){
-            opCards.get(i).setText(player2.getDeck().getCardsInHand().get(i).getName());
+            opCards.get(i).setText(/*player2.getDeck().getCardsInHand().get(i).getName()*/ null);
             opCards.get(i).setIcon(new ImageIcon(player2.getDeck().getCardsInHand().get(i).getCardImage().getScaledInstance(74, 113, Image.SCALE_DEFAULT)));
         }
 
