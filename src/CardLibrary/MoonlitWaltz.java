@@ -36,25 +36,6 @@ public class MoonlitWaltz extends Strike {
     }
 
 
-    public void cardsFromDiscardPile(Player effectedPlayer) {
-
-    }
-
-
-    public void ifCountered(Player playerCountered, Player playerCountering){
-
-    }
-
-
-    public void setBuff(Player playerBeingBuffed) {
-
-    }
-
-
-    public void cardsDrawnFromDeck(Player playerDrawingCards) {
-
-    }
-
     public int getDamage() {
         return damage;
     }

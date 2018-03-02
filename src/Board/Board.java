@@ -129,6 +129,9 @@ public class Board {
             }
         });
 
+        for (int i = 0; i < GameClient.userCards.size(); i++){
+            //ADD MOUSE LISTENERS HERE, IT'LL BE BADASS
+        }
     }
 
     private void processPlayAction(int CardSlot){

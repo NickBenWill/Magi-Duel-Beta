@@ -31,9 +31,6 @@ public class FlowingJabs extends Strike {
     }
 
 
-
-
-
     public void setBuff(Player playerBeingBuffed){
         playerBeingBuffed.setDamageBuff(3);
     }
