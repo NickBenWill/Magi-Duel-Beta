@@ -1,5 +1,7 @@
 package Online;
 
+import Board.GameClient;
+
 import java.net.*;
 import java.io.*;
 
@@ -13,6 +15,8 @@ public class MagiDuelServer {
             System.err.println("Could not listen on port: 4444.");
             System.exit(1);
         }
+        GameClient mainClient = new GameClient(); // the fat one
+
     }
 
 }
