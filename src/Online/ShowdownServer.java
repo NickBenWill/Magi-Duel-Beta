@@ -3,6 +3,7 @@ package Online;
 import Board.GameClient;
 import java.net.*;
 import java.io.*;
+import java.text.ParseException;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -30,8 +31,20 @@ public class ShowdownServer {
         }
     }
 
-    void initializeAccounts(){
 
+    // oh my god it's time to parse CSV files
+    void initializeAccounts() throws ParseException, IOException{
+        BufferedReader br = new BufferedReader(new FileReader("/Resources/test.csv"));
+        String line =  null;
+        HashMap<String,String> map = new HashMap<String, String>();
+
+        while((line=br.readLine())!=null){
+            String str[] = line.split(",");
+            for(int i=1;i<str.length;i++){
+                String arr[] = str[i].split(":");
+                map.put(arr[0], arr[1]);
+            }
+        }
     }
 
 }
