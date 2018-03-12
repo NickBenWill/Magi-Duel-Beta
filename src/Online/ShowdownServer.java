@@ -1,11 +1,15 @@
 package Online;
 
 import Board.GameClient;
-
 import java.net.*;
 import java.io.*;
+import java.util.HashMap;
+import java.util.Map;
 
-public class MagiDuelServer {
+
+public class ShowdownServer {
+    Map<String, String> loginDB = new HashMap<String, String>();
+
     public static void main(String[] args) throws IOException {
         ServerSocket serverSocket = null;
         try {
@@ -24,6 +28,10 @@ public class MagiDuelServer {
         catch (IOException e) {
             System.out.println(e);
         }
+    }
+
+    void initializeAccounts(){
+
     }
 
 }

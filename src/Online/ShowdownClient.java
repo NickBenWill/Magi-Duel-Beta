@@ -4,8 +4,16 @@ import java.io.*;
 
 // use home pc as temp server, meanwhile talk to Jthumm about server architecture
 
-public class MagiDuelClient {
+public class ShowdownClient {
+    public static ShowdownClient mdC = new ShowdownClient();
+    static ClientLogin board = new ClientLogin(mdC);
+    public String username;
+    public String pass;
+
     public static void main(String[] args) throws IOException {
+
+
+
         DataOutputStream os = null;
         DataInputStream is = null;
         try {
@@ -17,6 +25,8 @@ public class MagiDuelClient {
         } catch (IOException e) {
             System.err.println("Couldn't get I/O for the connection to: hostname");
         }
+
+
 
     }
 }
