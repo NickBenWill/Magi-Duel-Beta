@@ -1,17 +1,23 @@
 package Online;
 
 import Board.GameClient;
-import java.net.*;
-import java.io.*;
-import java.text.ParseException;
+import java.io.DataInputStream;
+import java.io.DataOutputStream;
+import java.io.IOException;
+import java.net.ServerSocket;
+import java.net.Socket;
 import java.util.HashMap;
 import java.util.Map;
-
+import org.json.JSONObject;
+import org.json.JSONException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 
 public class ShowdownServer {
-    Map<String, String> loginDB = new HashMap<String, String>();
+    static Map<String, String> loginDB = new HashMap<String, String>();
 
     public static void main(String[] args) throws IOException {
+        initializeAccounts();
         ServerSocket serverSocket = null;
         try {
             serverSocket = new ServerSocket(4444);
@@ -33,18 +39,21 @@ public class ShowdownServer {
 
 
     // oh my god it's time to parse CSV files
-    void initializeAccounts() throws ParseException, IOException{
-        BufferedReader br = new BufferedReader(new FileReader("/Resources/test.csv"));
-        String line =  null;
-        HashMap<String,String> map = new HashMap<String, String>();
+    public static void updateAccounts()  {
 
-        while((line=br.readLine())!=null){
-            String str[] = line.split(",");
-            for(int i=1;i<str.length;i++){
-                String arr[] = str[i].split(":");
-                map.put(arr[0], arr[1]);
-            }
-        }
+
     }
+
+    public static void initializeAccounts() throws IOException {
+        String filename = "/Resources/logins.json";
+        JSONObject jsonObject = parseJSONFile(filename);
+    }
+
+
+    public static JSONObject parseJSONFile(String filename) throws JSONException, IOException {
+        String content = new String(Files.readAllBytes(Paths.get(filename)));
+        return new JSONObject(content);
+    }
+
 
 }
