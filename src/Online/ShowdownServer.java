@@ -1,10 +1,8 @@
 package Online;
 
 import Board.GameClient;
-import java.io.DataInputStream;
-import java.io.DataOutputStream;
-import java.io.IOException;
-import java.io.OutputStreamWriter;
+
+import java.io.*;
 import java.net.ServerSocket;
 import java.net.Socket;
 import java.util.HashMap;
@@ -19,7 +17,7 @@ import com.google.gson.*;
 
 public class ShowdownServer implements Runnable{
     static Map<String, String> loginDB = new HashMap<String, String>();
-    ServerSocket serverSocket = null;
+    static ServerSocket serverSocket = null;
     Socket clientSocket = null;
     GameClient mainClient = new GameClient(); // the fat one
 
@@ -27,9 +25,10 @@ public class ShowdownServer implements Runnable{
 
     }
 
-    public void main(String[] args) throws IOException {
-        initializeAccounts();
-        try {
+    public static void main(String[] args) throws IOException {
+        createAccountDB();
+        //initializeAccounts();
+        /*try {
             serverSocket = new ServerSocket(4444);
         } catch (IOException e) {
             System.err.println("Could not listen on port: 4444.");
@@ -45,6 +44,7 @@ public class ShowdownServer implements Runnable{
         catch (IOException e) {
             System.out.println(e);
         }
+        */
     }
 
     public void createAccount(String username, String password) throws IOException {
@@ -91,6 +91,13 @@ public class ShowdownServer implements Runnable{
             System.err.print(e);
         }
 
+    }
+
+    public static void createAccountDB() throws IOException{
+        loginDB.put("NickBenWill", "CrystalPepsi");
+        try (FileWriter file = new FileWriter("/Resources/logins.json")){
+            file.write((new JSONObject(loginDB)).toString());
+        }
     }
 
 
