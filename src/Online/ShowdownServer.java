@@ -7,7 +7,6 @@ import java.io.IOException;
 import java.io.OutputStreamWriter;
 import java.net.ServerSocket;
 import java.net.Socket;
-import java.net.UnknownHostException;
 import java.util.HashMap;
 import java.util.Map;
 import com.google.gson.reflect.TypeToken;
@@ -18,14 +17,18 @@ import java.nio.file.Paths;
 import com.google.gson.*;
 
 
-public class ShowdownServer {
+public class ShowdownServer implements Runnable{
     static Map<String, String> loginDB = new HashMap<String, String>();
-    Socket clientSocket = new Socket();
+    ServerSocket serverSocket = null;
+    Socket clientSocket = null;
     GameClient mainClient = new GameClient(); // the fat one
 
-    public static void main(String[] args) throws IOException {
+    public void run(){
+
+    }
+
+    public void main(String[] args) throws IOException {
         initializeAccounts();
-        ServerSocket serverSocket = null;
         try {
             serverSocket = new ServerSocket(4444);
         } catch (IOException e) {
